@@ -31,10 +31,16 @@
 /* ##########  */
 /*   $GLOBAL   */
 /* ##########  */
+/*
 @media (min-width: 979px) {
   body {
     padding-top: 80px;
   }
+}
+*/
+
+.navber-nomargin{
+  margin-bottom: 0px;
 }
 
 iframe {
