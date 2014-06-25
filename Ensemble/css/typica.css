@@ -1165,6 +1165,12 @@ blockquote p {
 	border: medium solid #DDDDDD;
 	text-align: center;
 }
+.concept-meta .concept-title h2 {
+	text-decoration: underline;
+}
+.concept-meta .concept-description p {
+	text-align: center;
+}
 
 /* ######## */
 /* $QUERIES */

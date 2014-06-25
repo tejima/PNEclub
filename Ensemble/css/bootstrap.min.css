@@ -28,3 +28,13 @@
 .container.more {
 	margin-top: 0px;
 }
+.concept-meta {
+	border-style: solid;
+	border-radius: 50%;
+}
+.concept-description {
+	margin-top: 10px;
+	margin-right: 36px;
+	margin-bottom: 36px;
+	margin-left: 36px;
+}
