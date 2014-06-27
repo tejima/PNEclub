@@ -305,10 +305,11 @@ blockquote p {
 /* $FOOTER  */
 /* ######## */
 footer {
-  color: #BBB;
-  margin-top: 25px;
-  padding-top: 10px;
-  background: #555;
+	color: #BBB;
+	margin-top: 25px;
+	padding-top: 10px;
+	background: #555;
+	max-width: 100%;
 }
 footer p {
   padding-bottom: 0;
