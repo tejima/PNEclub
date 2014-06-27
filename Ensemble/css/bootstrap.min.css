@@ -18,13 +18,17 @@
 	text-align: center;
 }
 .container .meta .meta-table {
-	width: 40%;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
 }
 .meta-table tbody tr td {
 	text-align: center;
 }
 .container .member .member-table {
-	width: 75%;
+	width: 92%;
+	margin-left: auto;
+	margin-right: auto;
 }
 .recruit {
 	text-align: center;
@@ -34,8 +38,8 @@
 	text-align: center;
 }
 .container .contact {
-	text-align: center;
 	margin-top: 100px;
+	text-align: center;
 }
 .member-table tbody tr td {
 	text-align: left;
@@ -47,26 +51,27 @@
 	text-align: center;
 }
 .container .event .event-table {
-	width: 65%;
+	width: 500px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .container .contact .contact-table {
-	width: 65%;
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 .contact-table tbody tr td {
 	text-align: center;
-}
-.container .aplly {
-	margin-top: 101px;
-	text-align: center;
-}
-.aplly .apply-form.well {
-	width: 50%;
-	margin-left: 22%;
-	margin-right: 0px;
 }
 .aplly .apply-form.well .apply-label {
 	text-align: left;
 }
 .aplly .apply-form.well .aplly-text {
 	width: 100%;
+}
+.container .aplly .apply-form.well {
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	width: 380px;
 }

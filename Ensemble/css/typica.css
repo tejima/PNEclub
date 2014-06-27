@@ -332,9 +332,13 @@ h1, h2, h3, h4, h5 {
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  line-height: 170%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	line-height: 170%;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	text-indent: 15px;
 }
 
 blockquote p {
@@ -1152,18 +1156,28 @@ blockquote p {
   max-width: 245px;
 }
 .single-name h1 {
-	text-align: center;
 	margin-top: 25px;
 	margin-bottom: 25px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+	text-align: center;
 }
 .container .recruit .recruit-content {
 	font-size: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 450px;
 }
 .container .summary .summary-title {
 	text-align: center;
 }
 .container .contact .contact-content {
 	margin-bottom: 25px;
+}
+.container .aplly .apply-title {
+	text-align: center;
+	margin-top: 80px;
 }
 
 /* ######## */
