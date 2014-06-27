@@ -326,15 +326,21 @@ footer a:hover {
 /* ###### */
 /* global */
 h1, h2, h3, h4, h5 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  padding: 10px 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+	padding: 10px 0;
+	text-align: center;
 }
 
 p {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  line-height: 170%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	line-height: 170%;
+	top: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: large;
+	border-style: none;
 }
 
 blockquote p {
@@ -385,9 +391,8 @@ blockquote p {
 /* $ABOUT */
 /* ###### */
 .member {
-	text-align: center;
-	padding-bottom: 25px;
-	margin-top: 60px;
+  text-align: center;
+  padding-bottom: 25px;
 }
 .member .thumbnail {
   margin: 0 auto;
@@ -1150,11 +1155,61 @@ blockquote p {
 .portfolio-thumbnails .portfolio-item .image-wrapper img {
   max-width: 245px;
 }
-.single-name h1 {
+.title {
+	border-style: none;
+	font-weight: bold;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.thumbnail p {
+	border: medium solid #DDDDDD;
 	text-align: center;
 }
-.container .recruit .recruit-content {
-	font-size: 20px;
+.concept-meta .concept-title h2 {
+	text-decoration: underline;
+}
+.concept-meta .concept-description p {
+	text-align: center;
+}
+.container .about-meta .about-title {
+	text-align: left;
+	font-size: 18px;
+}
+.container .about-meta p {
+	font-size: 16px;
+	text-indent: 0;
+	text-align: left;
+	margin-left: 37px;
+}
+.container .process-title {
+	font-weight: bold;
+}
+.row .step.span3 p {
+	font-size: 14px;
+}
+.row .step.span3 .step-title {
+	font-size: 15px;
+}
+.tab-content #profile .title {
+	text-align: left;
+	text-indent: 0px;
+}
+.profile-content p {
+	text-align: center;
+	font-weight: bold;
+}
+.tab-content #profile .summary {
+	text-indent: 18px;
+}
+.tab-content #recruit p {
+	text-align: center;
+}
+.container .single-name h1 {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-family: "ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+	font-style: normal;
+	font-weight: 400;
 }
 
 /* ######## */
