@@ -1177,6 +1177,7 @@ blockquote p {
 }
 .container .contact .contact-content {
 	margin-bottom: 25px;
+	text-align: left;
 }
 .container .aplly .apply-title {
 	text-align: center;
