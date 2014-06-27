@@ -1171,6 +1171,46 @@ blockquote p {
 .concept-meta .concept-description p {
 	text-align: center;
 }
+.container .about-meta .about-title {
+	text-align: left;
+	font-size: 18px;
+}
+.container .about-meta p {
+	font-size: 16px;
+	text-indent: 0;
+	text-align: left;
+	margin-left: 37px;
+}
+.container .process-title {
+	font-weight: bold;
+}
+.row .step.span3 p {
+	font-size: 14px;
+}
+.row .step.span3 .step-title {
+	font-size: 15px;
+}
+.tab-content #profile .title {
+	text-align: left;
+	text-indent: 0px;
+}
+.profile-content p {
+	text-align: center;
+	font-weight: bold;
+}
+.tab-content #profile .summary {
+	text-indent: 18px;
+}
+.tab-content #recruit p {
+	text-align: center;
+}
+.container .single-name h1 {
+	margin-top: 25px;
+	margin-bottom: 25px;
+	font-family: "ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;
+	font-style: normal;
+	font-weight: 400;
+}
 
 /* ######## */
 /* $QUERIES */
