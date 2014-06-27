@@ -339,6 +339,7 @@ p {
 	margin-left: auto;
 	margin-right: auto;
 	text-indent: 15px;
+	max-width: 100%;
 }
 
 blockquote p {
@@ -1162,12 +1163,14 @@ blockquote p {
 	margin-right: auto;
 	width: 90%;
 	text-align: center;
+	max-width: 100%;
 }
 .container .recruit .recruit-content {
 	font-size: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 450px;
+	max-width: 100%;
 }
 .container .summary .summary-title {
 	text-align: center;
