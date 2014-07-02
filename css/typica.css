@@ -125,13 +125,14 @@ blockquote p {
 }
 
 .hero-unit {
-  margin: 0 0 25px 0;
-  padding: 60px 20px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  -o-border-radius: 0px;
-  border-radius: 0px;
+	margin: 0 0 25px 0;
+	padding: 60px 20px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+	max-width: 100%;
 }
 .hero-unit h1 {
   color: #555;
@@ -185,7 +186,8 @@ blockquote p {
   max-height: 600px;
 }
 .carousel .item img {
-  width: 100%;
+	width: 100%;
+	max-width: 100%;
 }
 .carousel .carousel-control {
   background: none;
