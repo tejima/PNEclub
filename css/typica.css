@@ -1149,6 +1149,44 @@ blockquote p {
 .portfolio-thumbnails .portfolio-item .image-wrapper img {
   max-width: 245px;
 }
+.logo {
+	margin-left: 2%;
+	color: #FFFFFF;
+}
+.thumbnail .thumbnail-title  {
+	margin-left: 2%;
+}
+.thumbnail-meta p {
+	text-align: center;
+}
+.caption-1 {
+	position: absolute;
+	top: 3%;
+	margin-left: 3%;
+}
+.feature {
+	margin-bottom: 15%;
+	margin-top: 5%;
+	border-style: solid;
+	color: #000000;
+	border-color: #FFFFFF;
+	background-color: #FFFFFF;
+}
+.edit {
+	border-style: solid;
+	color: #000000;
+	width: 90%;
+}
+.found-club {
+	border-style: solid;
+}
+.thumbnail .thumbnail-image img {
+	width: 100%;
+}
+.capthumbnail {
+	color: #FFFFFF;
+	border-style: solid;
+}
 
 /* ######## */
 /* $QUERIES */
