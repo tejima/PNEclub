@@ -4,7 +4,7 @@
 	background-color: #292929;
 	color: #FFFFFF;
 	height: 300px;
-	padding-bottom: 10px;
+	padding-bottom: 30px;
 }
 .thumb h2 {
 	background-color: #5A5A5A;
@@ -12,11 +12,10 @@
 	margin-bottom: 0px;
 	padding-left: 12px;
 	font-size: 25px;
+	margin-top: 0px;
 }
 .thumb p {
-	font-weight: bold;
 	margin-left: 18px;
-	margin-top: 9px;
 	color: #444444;
 }
 .thumb .row-fluid {
@@ -31,14 +30,14 @@
 	height: 150px;
 }
 .thumb {
-	width: 86%;
+	width: 100%;
+	margin-top: 0px;
 }
 .section-title h3 {
-	margin-left: 10px;
 	width: 260px;
 	padding-top: 30px;
 }
-.hero-unit .found {
+.unit .found {
 	padding-left: 17px;
 	padding-top: 30px;
 	padding-right: 20px;
@@ -47,7 +46,6 @@
 	background-color: #292929;
 	width: 80%;
 	margin-left: 20px;
-	margin-top: 27px;
 	margin-bottom: 10px;
 }
 .found p strong {
@@ -57,28 +55,33 @@ footer .found {
 	background-color: #FFFFFF;
 	color: #000000;
 	padding-left: 13px;
-	padding-top: 23px;
+	padding-top: 30px;
 	padding-bottom: 2px;
-	width: 74%;
-	margin-top: 20px;
-	margin-left: 10px;
+	width: 85%;
+	margin-top: 45px;
+	margin-left: auto;
+	margin-right: auto;
 }
 footer .edit {
 	color: #000000;
 	background-color: #FFFFFF;
-	width: 74%;
+	width: 85%;
 	padding-left: 13px;
-	padding-top: 23px;
+	padding-top: 30px;
 	padding-bottom: 2px;
-	margin-top: 20px;
-	margin-left: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 45px;
 }
 .edit p strong {
-	font-size: 20px;
+	font-size: 28px;
 }
 footer .thumb {
 	padding-top: 0px;
-	margin-left: 25px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
 }
 footer .thumb img {
 	height: 150px;
@@ -91,44 +94,107 @@ footer .thumb img {
 	width: 210px;
 	padding-top: 3px;
 	padding-bottom: 3px;
-	margin-left: 10px;
 }
 .slide-content {
-	width: 92%;
-	margin-left: 56px;
+	margin-left: 35px;
+	margin-right: 35px;
 }
 footer h1 {
-	font-size: 54px;
-	margin-top: 30px;
+	font-size: 58px;
+	margin-top: 40px;
 	margin-left: 10px;
+	text-align: center;
 }
-.hero-unit strong {
+.unit strong {
 	font-size: 25px;
 }
 .slide-content .edit {
 	color: #444444;
 	background-color: #FFFFFF;
-	padding-left: 15px;
-	padding-top: 11px;
-	margin-top: 24px;
-	padding-bottom: 1px;
-	width: 85%;
+	margin-bottom: 6px;
+	font-size: 17px;
+	height: 100px;
+	padding-bottom: 14px;
+	padding-left: 8px;
 }
 .slide-content .pickup {
 	color: #444444;
 	background-color: #FFFFFF;
-	padding-top: 23px;
-	padding-left: 15px;
-	margin-top: 35px;
-	padding-bottom: 1px;
-	width: 85%;
+	font-size: 17px;
+	height: 110px;
+	margin-bottom: 53px;
+	padding-bottom: 4px;
+	padding-top: 6px;
+	padding-left: 8px;
 }
 .pickup p strong {
-	font-size: 25px;
+	font-size: 28px;
 }
 footer h3 {
-	margin-top: 30px;
+	margin-top: 58px;
 	margin-left: 10px;
+	font-size: 23px;
+	text-align: center;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.more h3 {
+	text-align: center;
+	background-color: #444444;
+	color: #FFFFFF;
+	margin-top: 36px;
+}
+
+.main-title p {
+	font-weight: bold;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #FFFFFF;
+	font-size: 46px;
+}
+.thumb h4 {
+	margin-left: 18px;
+	color: #444444;
+	font-weight: 900;
+	margin-bottom: -1px;
+	margin-top: 6px;
+}
+.summary {
+	margin-top: 15px;
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 15px;
+}
+.footer-main {
+	margin-left: 55px;
+	margin-right: 55px;
+}
+footer .summary {
+	font-size: 13px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+footer .thumb h2 {
+	font-size: 18px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+footer .thumb h4 {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.first-member {
+	background-color: #292929;
+	padding-left: 6px;
+	color: #FFFFFF;
+	margin-right: 10px;
+	padding-right: 6px;
+	text-align: center;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	height: 60px;
+}
+.span5 .first-member div {
+	padding-top: 10px;
 }
 
 /* 
@@ -168,18 +234,20 @@ footer h3 {
 	color: undefined;
   }
 .main {
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: 55px;
+	margin-right: 55px;
 	background-color: #EEEEEE;
 	margin-bottom: -26px;
 	padding-bottom: 30px;
 }
 .main-title {
-	font-size: 46px;
 	background-color: #292929;
-	color: #FFFFFF;
-	padding-left: 43px;
 	margin-bottom: -10px;
+	font-size: medium;
+	padding-left: 55px;
+}
+.main .unit {
+	padding-top: 33px;
 }
 }
 
@@ -452,12 +520,11 @@ blockquote p {
 footer {
 	color: #BBB;
 	margin-top: 25px;
-	padding-top: 10px;
+	padding-top: 15px;
 	background-color: #292929;
 	padding-bottom: 15px;
 }
 footer p {
-	margin-bottom: 1px;
 }
 footer a {
   color: #BBB;
@@ -496,11 +563,11 @@ blockquote p {
 }
 
 .section-title h2 {
-  font-family: 'Lato', sans-serif;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 36px;
-  text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 36px;
+	text-align: center;
 }
 .section-title.horizontal-left h2 {
   text-align: left;
