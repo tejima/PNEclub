@@ -49,6 +49,8 @@
 	background-color: #FFFFFF;
 	text-align: center;
 	height: 75px;
+	border-top-style: solid;
+	border-top-width: thin;
 }
 .inner-main {
 	width: 100%;
@@ -63,6 +65,8 @@
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 10px;
+	border-style: solid;
+	border-width: thin;
 }
 .section-title h3 {
 	width: 260px;
