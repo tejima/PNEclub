@@ -16,7 +16,7 @@
 	width: 100%;
 }
 .visual {
-	background-color: #292929;
+	background-color: #7DE0F9;
 }
 .visual .visual-content {
 	padding-bottom: 20px;
@@ -32,7 +32,7 @@
 	padding-bottom: 30px;
 }
 .thumb h2 {
-	background-color: #5A5A5A;
+	background-color: #FF7C9D;
 	color: #FFFFFF;
 	margin-bottom: 0px;
 	padding-left: 12px;
@@ -46,7 +46,7 @@
 	margin-top: 10px;
 }
 .thumb .row-fluid {
-	background-color: #C4C4C4;
+	background-color: #FFFFFF;
 	text-align: center;
 	height: 75px;
 }
@@ -70,7 +70,7 @@
 }
 .unit .found {
 	color: #FFFFFF;
-	background-color: #292929;
+	background-color: #787878;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 0px;
@@ -101,7 +101,7 @@ footer .edit {
 }
 .if {
 	text-align: center;
-	background-color: #292929;
+	background-color: #787878;
 	color: #FFFFFF;
 	font-size: 22px;
 	width: 210px;
@@ -147,7 +147,7 @@ footer h3 {
 }
 .more h3 {
 	text-align: center;
-	background-color: #444444;
+	background-color: #787878;
 	color: #FFFFFF;
 	margin-top: 36px;
 	margin-bottom: 36px;
@@ -179,7 +179,7 @@ footer .thumb h4 {
 	padding-bottom: 0px;
 }
 .first-member {
-	background-color: #292929;
+	background-color: #787878;
 	padding-left: 6px;
 	color: #FFFFFF;
 	padding-right: 6px;
@@ -309,6 +309,10 @@ footer .thumb h4 {
 	font-size: 23px;
 	height: 100px;
 	padding-top: 35px;
+}
+.activity-image   {
+	text-align: center;
+	margin-bottom: 10px;
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
@@ -923,10 +927,10 @@ blockquote p {
 /* $FOOTER  */
 /* ######## */
 footer {
-	color: #BBB;
+	color: #FFFFFF;
 	margin-top: 25px;
 	padding-top: 15px;
-	background-color: #292929;
+	background-color: #7DE0F9;
 	padding-bottom: 15px;
 }
 footer a {
