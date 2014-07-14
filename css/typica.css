@@ -75,7 +75,7 @@
 }
 .unit .found {
 	color: #FFFFFF;
-	background-color: #787878;
+	background-color: #17DC1F;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 0px;
@@ -106,7 +106,7 @@ footer .edit {
 }
 .if {
 	text-align: center;
-	background-color: #787878;
+	background-color: #16DC1F;
 	color: #FFFFFF;
 	font-size: 22px;
 	width: 210px;
@@ -152,7 +152,7 @@ footer h3 {
 }
 .more h3 {
 	text-align: center;
-	background-color: #787878;
+	background-color: #16DC1F;
 	color: #FFFFFF;
 	margin-top: 36px;
 	margin-bottom: 36px;
@@ -184,7 +184,7 @@ footer .thumb h4 {
 	padding-bottom: 0px;
 }
 .first-member {
-	background-color: #787878;
+	background-color: #16DC1F;
 	padding-left: 6px;
 	color: #FFFFFF;
 	padding-right: 6px;
