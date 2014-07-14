@@ -39,6 +39,7 @@
 	font-size: 25px;
 	margin-top: 0px;
 	height: 40px;
+	border-bottom: thin solid #000000;
 }
 .thumb p {
 	color: #444444;
