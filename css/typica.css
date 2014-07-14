@@ -1,4 +1,49 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,600,400,300|Open+Sans+Condensed:300,700|Lato:100,300,400);
+.main-title p {
+	font-weight: bold;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #FFFFFF;
+	font-size: 46px;
+	margin-left: 0px;
+	padding-top: 10px;
+}
+.visual {
+	background-color: #72BAEE;
+}
+.visual .visual-content {
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 875px;
+}
+.visual .edit {
+	color: #444444;
+	background-color: #FFFFFF;
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 115px;
+}
+.visual .pickup {
+	color: #444444;
+	background-color: #FFFFFF;
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 115px;
+	margin-bottom: 34px;
+}
+.pickup .pickup-content {
+	padding-left: 10px;
+}
+.pickup p strong {
+	font-size: 28px;
+}
+.edit p strong {
+	font-size: 28px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
 .main {
 	margin-left: auto;
 	margin-right: auto;
@@ -15,14 +60,12 @@
 	margin-right: auto;
 	width: 100%;
 }
-.visual {
-	background-color: #72BAEE;
-}
-.visual .visual-content {
-	padding-bottom: 20px;
+.thumb {
+	margin-top: 0px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 875px;
+	margin-bottom: 10px;
+	border: thin solid #000000;
 }
 .thumb h2 {
 	background-color: #FF7772;
@@ -46,20 +89,9 @@
 	border-top-style: solid;
 	border-top-width: thin;
 }
-.inner-main {
-	width: 100%;
-	height: 100%;
-}
 .thumb img {
 	height: 130px;
 	width: 100%;
-}
-.thumb {
-	margin-top: 0px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10px;
-	border: thin solid #000000;
 }
 .section-title h3 {
 	width: 260px;
@@ -74,8 +106,20 @@
 	padding-top: 28px;
 	padding-bottom: 3px;
 }
+.unit strong {
+	font-size: 25px;
+}
 .found p strong {
 	font-size: 25px;
+}
+.if {
+	text-align: center;
+	background-color: #16DC1F;
+	color: #FFFFFF;
+	font-size: 22px;
+	width: 210px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 footer .found {
 	background-color: #FFFFFF;
@@ -91,48 +135,11 @@ footer .edit {
 	margin-right: auto;
 	height: 100px;
 }
-.edit p strong {
-	font-size: 28px;
-	padding-bottom: 0px;
-	padding-top: 0px;
-}
-.if {
-	text-align: center;
-	background-color: #16DC1F;
-	color: #FFFFFF;
-	font-size: 22px;
-	width: 210px;
-	padding-top: 3px;
-	padding-bottom: 3px;
-}
 footer h1 {
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 60px;
 	text-align: center;
-}
-.unit strong {
-	font-size: 25px;
-}
-.visual .edit {
-	color: #444444;
-	background-color: #FFFFFF;
-	font-size: 17px;
-	margin-left: auto;
-	margin-right: auto;
-	height: 115px;
-}
-.visual .pickup {
-	color: #444444;
-	background-color: #FFFFFF;
-	font-size: 17px;
-	margin-left: auto;
-	margin-right: auto;
-	height: 115px;
-	margin-bottom: 34px;
-}
-.pickup p strong {
-	font-size: 28px;
 }
 footer h3 {
 	font-size: 21px;
@@ -149,31 +156,8 @@ footer h3 {
 	margin-top: 36px;
 	margin-bottom: 36px;
 }
-
-.main-title p {
-	font-weight: bold;
-	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	color: #FFFFFF;
-	font-size: 46px;
-	margin-left: 0px;
-	padding-top: 10px;
-}
 .thumb h4 {
 	color: #444444;
-}
-.summary {
-	font-weight: bold;
-	font-size: 15px;
-	margin-left: 10px;
-	margin-right: 3px;
-}
-footer .thumb h2 {
-	font-size: 25px;
-	height: 40px;
-}
-footer .thumb h4 {
-	padding-top: 0px;
-	padding-bottom: 0px;
 }
 .first-member {
 	background-color: #16DC1F;
@@ -191,6 +175,20 @@ footer .thumb h4 {
 	margin-bottom: 10px;
 	font-size: 12px;
 }
+.summary {
+	font-weight: bold;
+	font-size: 15px;
+	margin-left: 10px;
+	margin-right: 3px;
+}
+footer .thumb h2 {
+	font-size: 25px;
+	height: 40px;
+}
+footer .thumb h4 {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
 .footer-content {
 	width: 875px;
 	margin-left: auto;
@@ -198,9 +196,6 @@ footer .thumb h4 {
 }
 .edit .edit-content {
 	padding-left: 12px;
-}
-.pickup .pickup-content {
-	padding-left: 10px;
 }
 .found .found-content {
 	padding-left: 12px;
@@ -228,6 +223,8 @@ footer .thumb h4 {
 	padding-left: 28px;
 	padding-right: 28px;
 }
+
+
 .member-name {
 	font-size: 23px;
 	height: 100px;
@@ -256,6 +253,12 @@ footer .thumb h4 {
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
+.visual .visual-content {
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 750px;
+}
 .main {
 	margin-left: auto;
 	margin-right: auto;
@@ -263,11 +266,8 @@ footer .thumb h4 {
 	margin-bottom: -26px;
 	width: 750px;
 }
-.visual .visual-content {
-	padding-bottom: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 750px;
+.first-member {
+	font-size: 11px;
 }
 footer h1 {
 	margin-left: auto;
@@ -282,9 +282,6 @@ footer h3 {
 	margin-right: auto;
 	width: 100%;
 	padding-top: 16px;
-}
-.first-member {
-	font-size: 11px;
 }
 .footer-content {
 	width: 750px;
@@ -304,11 +301,70 @@ footer h3 {
 	padding-right: 28px;
 }
 .summary {
-        font-size: 12px;
+	font-size: 12px;
+	padding-top: 6px;
+	padding-left: 1px;
 }
 
 }
 
+@media (max-width: 769px) {
+.visual .visual-content {
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+}
+.main {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+	margin-bottom: -26px;
+	width: 600px;
+}
+.footer-content {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.thumb h2 {
+	background-color: #FF7772;
+	color: #FFFFFF;
+	margin-bottom: 0px;
+	padding-left: 12px;
+	font-size: 17px;
+	margin-top: 0px;
+	height: 35px;
+	border-bottom: thin solid #000000;
+}
+.thumb p {
+	color: #FFFFFF;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.thumb .row-fluid {
+	background-color: #FF7772;
+	text-align: center;
+	height: 75px;
+	border-top-style: solid;
+	border-top-width: thin;
+}
+.thumb img {
+	height: 130px;
+	width: 100%;
+}
+.summary {
+	font-size: 12px;
+}
+.pickup p strong {
+	font-size: 25px;
+}
+.edit p strong {
+	font-size: 25px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+}
 /* 
 *           Layout stylesheet
 * ======================================
