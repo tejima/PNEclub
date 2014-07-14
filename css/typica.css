@@ -16,7 +16,7 @@
 	width: 100%;
 }
 .visual {
-	background-color: #7DE0F9;
+	background-color: #72BAEE;
 }
 .visual .visual-content {
 	padding-bottom: 20px;
@@ -32,7 +32,7 @@
 	padding-bottom: 30px;
 }
 .thumb h2 {
-	background-color: #FF7C9D;
+	background-color: #FF7772;
 	color: #FFFFFF;
 	margin-bottom: 0px;
 	padding-left: 12px;
@@ -42,12 +42,12 @@
 	border-bottom: thin solid #000000;
 }
 .thumb p {
-	color: #444444;
+	color: #FFFFFF;
 	font-weight: bold;
 	margin-top: 10px;
 }
 .thumb .row-fluid {
-	background-color: #FFFFFF;
+	background-color: #FF7772;
 	text-align: center;
 	height: 75px;
 	border-top-style: solid;
@@ -935,7 +935,7 @@ footer {
 	color: #FFFFFF;
 	margin-top: 25px;
 	padding-top: 15px;
-	background-color: #7DE0F9;
+	background-color: #72BAEE;
 	padding-bottom: 15px;
 }
 footer a {
