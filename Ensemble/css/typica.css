@@ -1,4 +1,646 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,600,400,300|Open+Sans+Condensed:300,700|Lato:100,300,400);
+.main {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #EEEEEE;
+	margin-bottom: -26px;
+	width: 875px;
+}
+.main-title {
+	margin-bottom: -10px;
+	font-size: medium;
+	padding-left: 35px;
+}
+.main .unit {
+	padding-top: 33px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+.visual {
+	background-color: #292929;
+}
+.visual .visual-content {
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 875px;
+}
+.slider-main {
+	width: 100%;
+	background-color: #292929;
+	color: #FFFFFF;
+	height: 300px;
+	padding-bottom: 30px;
+}
+.thumb h2 {
+	background-color: #5A5A5A;
+	color: #FFFFFF;
+	margin-bottom: 0px;
+	padding-left: 12px;
+	font-size: 25px;
+	margin-top: 0px;
+	height: 40px;
+}
+.thumb p {
+	color: #444444;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.thumb .row-fluid {
+	background-color: #C4C4C4;
+	text-align: center;
+	height: 75px;
+}
+.inner-main {
+	width: 100%;
+	height: 100%;
+}
+.thumb img {
+	height: 130px;
+	width: 100%;
+}
+.thumb {
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+.section-title h3 {
+	width: 260px;
+	padding-top: 30px;
+}
+.unit .found {
+	color: #FFFFFF;
+	background-color: #292929;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0px;
+	padding-top: 28px;
+	padding-bottom: 3px;
+}
+.found p strong {
+	font-size: 25px;
+}
+footer .found {
+	background-color: #FFFFFF;
+	color: #000000;
+	width: 266px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+}
+footer .edit {
+	color: #000000;
+	background-color: #FFFFFF;
+	width: 266px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+}
+.edit p strong {
+	font-size: 28px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+footer .thumb {
+	width: 266px;
+	margin-left: auto;
+	margin-right: auto;
+}
+footer .thumb img {
+	height: 130px;
+	width: 100%;
+}
+.if {
+	text-align: center;
+	background-color: #292929;
+	color: #FFFFFF;
+	font-size: 22px;
+	width: 210px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+footer h1 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	font-size: 60px;
+	text-align: center;
+}
+.unit strong {
+	font-size: 25px;
+}
+.visual .edit {
+	color: #444444;
+	background-color: #FFFFFF;
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 115px;
+}
+.visual .pickup {
+	color: #444444;
+	background-color: #FFFFFF;
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 115px;
+	margin-bottom: 34px;
+}
+.pickup p strong {
+	font-size: 28px;
+}
+footer h3 {
+	font-size: 21px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-top: 16px;
+}
+.more h3 {
+	text-align: center;
+	background-color: #444444;
+	color: #FFFFFF;
+	margin-top: 36px;
+	margin-bottom: 36px;
+}
+
+.main-title p {
+	font-weight: bold;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #FFFFFF;
+	font-size: 46px;
+	margin-left: 0px;
+	padding-top: 10px;
+}
+.thumb h4 {
+	color: #444444;
+}
+.summary {
+	font-weight: bold;
+	font-size: 15px;
+	margin-left: 10px;
+	margin-right: 3px;
+}
+footer .thumb h2 {
+	font-size: 25px;
+	height: 40px;
+}
+footer .thumb h4 {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.first-member {
+	background-color: #292929;
+	padding-left: 6px;
+	color: #FFFFFF;
+	padding-right: 6px;
+	height: 40px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	margin-top: 15px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-bottom: 10px;
+}
+.span5 .first-member div {
+	font-size: 12px;
+}
+.footer-content {
+	width: 945px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.edit .edit-content {
+	padding-left: 12px;
+}
+.pickup .pickup-content {
+	padding-left: 10px;
+}
+.found p {
+}
+.found .found-content {
+	padding-left: 12px;
+}
+.single-title-row {
+	height: 80px;
+}
+.single-title-row h1   {
+	color: #FFFFFF;
+	margin-left: 0px;
+	padding-left: 10px;
+}
+.single-title-row h2 {
+	color: #292929;
+	text-align: center;
+	background-color: #FFFFFF;
+	width: 125px;
+}
+.video img  {
+	width: 200px;
+	padding-left: auto;
+	padding-right: auto;
+}
+.video {
+	text-align: center;
+	margin-top: 20px;
+}
+.single-member {
+	background-color: #FFFFFF;
+	width: 270px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.single-member p {
+	text-align: center;
+}
+.single-member img {
+	width: 100px;
+	height: 100px;
+	margin-top: 11px;
+}
+.single-member .name {
+	font-weight: bold;
+	font-size: 23px;
+	margin-left: -18px;
+	margin-bottom: -6px;
+}
+.single-member .member-row {
+	height: 40px;
+}
+.single-member .member-image {
+	text-align: center;
+}
+.single-middle-row h2 {
+	background-color: #292929;
+	color: #FFFFFF;
+	text-align: center;
+	width: 125px;
+}
+.footer-row-top {
+	height: 80px;
+	margin-top: 25px;
+	margin-bottom: 60px;
+}
+.container-padding {
+	padding-left: 28px;
+	padding-right: 28px;
+}
+.aplly {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.aplly  p {
+	font-size: 20px;
+}
+.aplly .aplly-text {
+	width: 60%;
+}
+.aplly .apply-submit {
+	margin-top: 31px;
+}
+.information {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+}
+.event {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+.main {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #EEEEEE;
+	margin-bottom: -26px;
+	width: 750px;
+}
+.main-title {
+	margin-bottom: -10px;
+	font-size: medium;
+	padding-left: 35px;
+}
+.main .unit {
+	padding-top: 33px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+.visual {
+	background-color: #292929;
+}
+.visual .visual-content {
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 750px;
+}
+.slider-main {
+	width: 100%;
+	background-color: #292929;
+	color: #FFFFFF;
+	height: 300px;
+	padding-bottom: 30px;
+}
+.thumb h2 {
+	background-color: #5A5A5A;
+	color: #FFFFFF;
+	margin-bottom: 0px;
+	padding-left: 12px;
+	font-size: 25px;
+	margin-top: 0px;
+	height: 40px;
+}
+.thumb p {
+	color: #444444;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.thumb .row-fluid {
+	background-color: #C4C4C4;
+	text-align: center;
+	height: 75px;
+}
+.inner-main {
+	width: 100%;
+	height: 100%;
+}
+.thumb img {
+	height: 130px;
+	width: 100%;
+}
+.thumb {
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+}
+.section-title h3 {
+	width: 260px;
+	padding-top: 30px;
+}
+.unit .found {
+	color: #FFFFFF;
+	background-color: #292929;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 0px;
+	padding-top: 28px;
+	padding-bottom: 3px;
+}
+.found p strong {
+	font-size: 25px;
+}
+footer .found {
+	background-color: #FFFFFF;
+	color: #000000;
+	width: 266px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+}
+footer .edit {
+	color: #000000;
+	background-color: #FFFFFF;
+	width: 266px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100px;
+}
+.edit p strong {
+	font-size: 28px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+footer .thumb {
+	width: 266px;
+	margin-left: auto;
+	margin-right: auto;
+}
+footer .thumb img {
+	height: 130px;
+	width: 100%;
+}
+.if {
+	text-align: center;
+	background-color: #292929;
+	color: #FFFFFF;
+	font-size: 22px;
+	width: 210px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+footer h1 {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	font-size: 60px;
+	text-align: center;
+}
+.unit strong {
+	font-size: 25px;
+}
+.visual .edit {
+	color: #444444;
+	background-color: #FFFFFF;
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 115px;
+}
+.visual .pickup {
+	color: #444444;
+	background-color: #FFFFFF;
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 115px;
+	margin-bottom: 34px;
+}
+.pickup p strong {
+	font-size: 28px;
+}
+footer h3 {
+	font-size: 21px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-top: 16px;
+}
+.more h3 {
+	text-align: center;
+	background-color: #444444;
+	color: #FFFFFF;
+	margin-top: 36px;
+	margin-bottom: 36px;
+}
+
+.main-title p {
+	font-weight: bold;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #FFFFFF;
+	font-size: 46px;
+	margin-left: 0px;
+	padding-top: 10px;
+}
+.thumb h4 {
+	color: #444444;
+}
+.summary {
+	font-weight: bold;
+	font-size: 15px;
+	margin-left: 10px;
+	margin-right: 3px;
+}
+footer .thumb h2 {
+	font-size: 25px;
+	height: 40px;
+}
+footer .thumb h4 {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.first-member {
+	background-color: #292929;
+	padding-left: 6px;
+	color: #FFFFFF;
+	padding-right: 6px;
+	height: 40px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	margin-top: 15px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	margin-bottom: 10px;
+}
+.span5 .first-member div {
+	font-size: 12px;
+}
+.footer-content {
+	width: 945px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.edit .edit-content {
+	padding-left: 12px;
+}
+.pickup .pickup-content {
+	padding-left: 10px;
+}
+.found p {
+}
+.found .found-content {
+	padding-left: 12px;
+}
+.single-title-row {
+	height: 80px;
+}
+.single-title-row h1   {
+	color: #FFFFFF;
+	margin-left: 0px;
+	padding-left: 10px;
+}
+.single-title-row h2 {
+	color: #292929;
+	text-align: center;
+	background-color: #FFFFFF;
+	width: 125px;
+}
+.video img  {
+	width: 200px;
+	padding-left: auto;
+	padding-right: auto;
+}
+.video {
+	text-align: center;
+	margin-top: 20px;
+}
+.single-member {
+	background-color: #FFFFFF;
+	width: 270px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.single-member p {
+	text-align: center;
+}
+.single-member img {
+	width: 100px;
+	height: 100px;
+	margin-top: 11px;
+}
+.single-member .name {
+	font-weight: bold;
+	font-size: 23px;
+	margin-left: -18px;
+	margin-bottom: -6px;
+}
+.single-member .member-row {
+	height: 40px;
+}
+.single-member .member-image {
+	text-align: center;
+}
+.single-middle-row h2 {
+	background-color: #292929;
+	color: #FFFFFF;
+	text-align: center;
+	width: 125px;
+}
+.footer-row-top {
+	height: 80px;
+	margin-top: 25px;
+	margin-bottom: 60px;
+}
+.container-padding {
+	padding-left: 28px;
+	padding-right: 28px;
+}
+.aplly {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.aplly  p {
+	font-size: 20px;
+}
+.aplly .aplly-text {
+	width: 60%;
+}
+.aplly .apply-submit {
+	margin-top: 31px;
+}
+.information {
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+}
+.event {
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+}
+.summary {
+        font-size: 12px;
+}
+
+}
+
 /* 
 *           Layout stylesheet
 * ======================================
@@ -31,18 +673,11 @@
 /* ##########  */
 /*   $GLOBAL   */
 /* ##########  */
-/*
 @media (min-width: 979px) {
   body {
-    padding-top: 80px;
+	color: undefined;
   }
 }
-*/
-
-.navber-nomargin{
-  margin-bottom: 0px;
-}
-
 iframe {
   width: 100%;
 }
@@ -125,13 +760,15 @@ blockquote p {
 }
 
 .hero-unit {
-  margin: 0 0 25px 0;
-  padding: 60px 20px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  -o-border-radius: 0px;
-  border-radius: 0px;
+	padding-top: 40px;
+	padding-right: 30px;
+	padding-left: 30px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+	-ms-border-radius: 0px;
+	-o-border-radius: 0px;
+	border-radius: 0px;
+	padding-bottom: 0px;
 }
 .hero-unit h1 {
   color: #555;
@@ -178,11 +815,14 @@ blockquote p {
 /* $CAROUSEL  */
 /* ########## */
 .carousel {
-  margin-bottom: 0;
+	margin-bottom: 0;
+	width: 100%;
+	height: 100%;
 }
 .carousel .item {
-  width: 100%;
-  max-height: 600px;
+	width: 100%;
+	max-height: 600px;
+	height: 100%;
 }
 .carousel .item img {
   width: 100%;
@@ -307,12 +947,9 @@ blockquote p {
 footer {
 	color: #BBB;
 	margin-top: 25px;
-	padding-top: 10px;
-	background: #555;
-	max-width: 100%;
-}
-footer p {
-  padding-bottom: 0;
+	padding-top: 15px;
+	background-color: #292929;
+	padding-bottom: 15px;
 }
 footer a {
   color: #BBB;
@@ -336,11 +973,6 @@ p {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	line-height: 170%;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	text-indent: 0px;
-	max-width: 100%;
 }
 
 blockquote p {
@@ -356,11 +988,11 @@ blockquote p {
 }
 
 .section-title h2 {
-  font-family: 'Lato', sans-serif;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 36px;
-  text-align: center;
+	font-family: 'Lato', sans-serif;
+	font-size: 36px;
+	font-weight: 400;
+	line-height: 36px;
+	text-align: center;
 }
 .section-title.horizontal-left h2 {
   text-align: left;
@@ -391,10 +1023,8 @@ blockquote p {
 /* $ABOUT */
 /* ###### */
 .member {
-	text-align: center;
-	padding-bottom: 25px;
-	margin-top: 100px;
-	margin-bottom: 50px;
+  text-align: center;
+  padding-bottom: 25px;
 }
 .member .thumbnail {
   margin: 0 auto;
@@ -1157,40 +1787,6 @@ blockquote p {
 .portfolio-thumbnails .portfolio-item .image-wrapper img {
   max-width: 245px;
 }
-.single-name h1 {
-	margin-top: 25px;
-	margin-bottom: 25px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 90%;
-	text-align: center;
-	max-width: 100%;
-}
-.container .recruit .recruit-content {
-	font-size: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 450px;
-	max-width: 100%;
-}
-.container .summary .summary-title {
-	text-align: center;
-}
-.container .contact .contact-content {
-	margin-bottom: 25px;
-	text-align: center;
-}
-.container .aplly .apply-title {
-	text-align: center;
-	margin-top: 80px;
-}
-.container .summary .summary-content {
-	width: 480px;
-}
-.container .contact .contact-content {
-	width: 480px;
-	text-align: left;
-}
 
 /* ######## */
 /* $QUERIES */
@@ -1212,7 +1808,7 @@ blockquote p {
   }
 }
 /* Portrait tablet*/
-@media (max-width: 980px) {
+@media (max-width:980px){
   .caption.top-right, .caption.middle-right, .caption.bottom-right {
     left: 0;
     margin-left: 0;
