@@ -309,6 +309,10 @@ footer h3 {
 }
 
 @media (max-width: 769px) {
+.visual {
+	background-color: #72BAEE;
+        min-width: 600px;
+}
 .visual .visual-content {
 	padding-bottom: 20px;
 	margin-left: auto;
@@ -363,6 +367,9 @@ footer h3 {
 	font-size: 25px;
 	padding-bottom: 0px;
 	padding-top: 0px;
+}
+footer {
+        min-width: 600px;
 }
 }
 /* 
