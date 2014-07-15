@@ -241,17 +241,16 @@ footer .thumb h4 {
 	height: 50px;
 	font-size: 28px;
 }
-.event {
-	width: 500px;
+.apply {
+	width: 300px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-style: solid;
+	margin-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;
 }
-.information   {
-	width: 500px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
 @media (min-width: 768px) and (max-width: 979px) {
 .visual .visual-content {
 	padding-bottom: 20px;
@@ -304,6 +303,16 @@ footer h3 {
 	font-size: 12px;
 	padding-top: 6px;
 	padding-left: 1px;
+}
+.apply {
+	width: 300px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-style: solid;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 }
@@ -370,6 +379,16 @@ footer h3 {
 }
 footer {
         min-width: 600px;
+}
+.apply {
+	width: 300px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-style: solid;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
 }
 /* 
