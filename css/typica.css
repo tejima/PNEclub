@@ -1,4 +1,49 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,600,400,300|Open+Sans+Condensed:300,700|Lato:100,300,400);
+.main-title p {
+	font-weight: bold;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #FFFFFF;
+	font-size: 46px;
+	margin-left: 0px;
+	padding-top: 10px;
+}
+.visual {
+	background-color: #72BAEE;
+}
+.visual .visual-content {
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 875px;
+}
+.visual .edit {
+	color: #444444;
+	background-color: #FFFFFF;
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 115px;
+}
+.visual .pickup {
+	color: #444444;
+	background-color: #FFFFFF;
+	font-size: 17px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 115px;
+	margin-bottom: 34px;
+}
+.pickup .pickup-content {
+	padding-left: 10px;
+}
+.pickup p strong {
+	font-size: 28px;
+}
+.edit p strong {
+	font-size: 28px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
 .main {
 	margin-left: auto;
 	margin-right: auto;
@@ -10,26 +55,17 @@
 	font-size: medium;
 }
 .main .unit {
-	padding-top: 33px;
+	padding-top: 30px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
 }
-.visual {
-	background-color: #72BAEE;
-}
-.visual .visual-content {
-	padding-bottom: 20px;
+.thumb {
+	margin-top: 0px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 875px;
-}
-.slider-main {
-	width: 100%;
-	background-color: #292929;
-	color: #FFFFFF;
-	height: 300px;
-	padding-bottom: 30px;
+	margin-bottom: 10px;
+	border: thin solid #000000;
 }
 .thumb h2 {
 	background-color: #FF7772;
@@ -53,25 +89,13 @@
 	border-top-style: solid;
 	border-top-width: thin;
 }
-.inner-main {
-	width: 100%;
-	height: 100%;
-}
 .thumb img {
 	height: 130px;
 	width: 100%;
 }
-.thumb {
-	margin-top: 0px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10px;
-	border-style: solid;
-	border-width: thin;
-}
 .section-title h3 {
 	width: 260px;
-	padding-top: 30px;
+	margin-top: 30px;
 }
 .unit .found {
 	color: #FFFFFF;
@@ -82,8 +106,20 @@
 	padding-top: 28px;
 	padding-bottom: 3px;
 }
+.unit strong {
+	font-size: 25px;
+}
 .found p strong {
 	font-size: 25px;
+}
+.if {
+	text-align: center;
+	background-color: #16DC1F;
+	color: #FFFFFF;
+	font-size: 22px;
+	width: 210px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 footer .found {
 	background-color: #FFFFFF;
@@ -99,48 +135,11 @@ footer .edit {
 	margin-right: auto;
 	height: 100px;
 }
-.edit p strong {
-	font-size: 28px;
-	padding-bottom: 0px;
-	padding-top: 0px;
-}
-.if {
-	text-align: center;
-	background-color: #16DC1F;
-	color: #FFFFFF;
-	font-size: 22px;
-	width: 210px;
-	padding-top: 3px;
-	padding-bottom: 3px;
-}
 footer h1 {
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 60px;
 	text-align: center;
-}
-.unit strong {
-	font-size: 25px;
-}
-.visual .edit {
-	color: #444444;
-	background-color: #FFFFFF;
-	font-size: 17px;
-	margin-left: auto;
-	margin-right: auto;
-	height: 115px;
-}
-.visual .pickup {
-	color: #444444;
-	background-color: #FFFFFF;
-	font-size: 17px;
-	margin-left: auto;
-	margin-right: auto;
-	height: 115px;
-	margin-bottom: 34px;
-}
-.pickup p strong {
-	font-size: 28px;
 }
 footer h3 {
 	font-size: 21px;
@@ -157,31 +156,8 @@ footer h3 {
 	margin-top: 36px;
 	margin-bottom: 36px;
 }
-
-.main-title p {
-	font-weight: bold;
-	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	color: #FFFFFF;
-	font-size: 46px;
-	margin-left: 0px;
-	padding-top: 10px;
-}
 .thumb h4 {
 	color: #444444;
-}
-.summary {
-	font-weight: bold;
-	font-size: 15px;
-	margin-left: 10px;
-	margin-right: 3px;
-}
-footer .thumb h2 {
-	font-size: 25px;
-	height: 40px;
-}
-footer .thumb h4 {
-	padding-top: 0px;
-	padding-bottom: 0px;
 }
 .first-member {
 	background-color: #16DC1F;
@@ -199,293 +175,6 @@ footer .thumb h4 {
 	margin-bottom: 10px;
 	font-size: 12px;
 }
-.footer-content {
-	width: 875px;
-	margin-left: auto;
-	margin-right: auto;
-}
-.edit .edit-content {
-	padding-left: 12px;
-}
-.pickup .pickup-content {
-	padding-left: 10px;
-}
-.found p {
-}
-.found .found-content {
-	padding-left: 12px;
-}
-.single-title-row {
-	height: 80px;
-}
-.single-title-row h1   {
-	color: #FFFFFF;
-	margin-left: 0px;
-	padding-left: 10px;
-}
-.single-title-row h2 {
-	color: #292929;
-	text-align: center;
-	background-color: #FFFFFF;
-	width: 125px;
-}
-.video img  {
-	width: 200px;
-	padding-left: auto;
-	padding-right: auto;
-}
-.video {
-	text-align: center;
-	margin-top: 20px;
-}
-.single-member {
-	background-color: #FFFFFF;
-	width: 270px;
-	margin-left: auto;
-	margin-right: auto;
-}
-.single-member p {
-	text-align: center;
-}
-.single-member img {
-	width: 100px;
-	height: 100px;
-}
-.single-member .name {
-	font-weight: bold;
-	font-size: 23px;
-	margin-left: -18px;
-	margin-bottom: -6px;
-}
-.single-member .member-row {
-	height: 40px;
-}
-.single-member .member-image {
-	text-align: center;
-}
-.single-middle-row h2 {
-	background-color: #292929;
-	color: #FFFFFF;
-	text-align: center;
-	width: 125px;
-}
-.footer-row-top {
-	height: 80px;
-	margin-top: 25px;
-	margin-bottom: 60px;
-}
-.container-padding {
-	padding-left: 28px;
-	padding-right: 28px;
-}
-.aplly {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-}
-.aplly  p {
-	font-size: 20px;
-}
-.aplly .aplly-text {
-	width: 60%;
-}
-.aplly .apply-submit {
-	margin-top: 31px;
-}
-.information {
-	width: 400px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #FFFFFF;
-}
-.event {
-	width: 600px;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #FFFFFF;
-}
-.copy {
-	height: 48px;
-	background-color: #FFFFFF;
-	text-align: center;
-	font-size: 28px;
-}
-.member-name {
-	font-size: 23px;
-	height: 100px;
-	padding-top: 35px;
-}
-.activity-image   {
-	text-align: center;
-	margin-bottom: 10px;
-}
-
-@media (min-width: 768px) and (max-width: 979px) {
-.main {
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #EEEEEE;
-	margin-bottom: -26px;
-	width: 750px;
-}
-.main-title {
-	font-size: medium;
-}
-.main .unit {
-	padding-top: 33px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-}
-.visual {
-	background-color: #292929;
-}
-.visual .visual-content {
-	padding-bottom: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 750px;
-}
-.slider-main {
-	width: 100%;
-	background-color: #292929;
-	color: #FFFFFF;
-	height: 300px;
-	padding-bottom: 30px;
-}
-.thumb h2 {
-	background-color: #5A5A5A;
-	color: #FFFFFF;
-	margin-bottom: 0px;
-	padding-left: 12px;
-	font-size: 25px;
-	margin-top: 0px;
-	height: 40px;
-}
-.thumb p {
-	color: #444444;
-	font-weight: bold;
-	margin-top: 10px;
-}
-.thumb .row-fluid {
-	background-color: #C4C4C4;
-	text-align: center;
-	height: 75px;
-}
-.inner-main {
-	width: 100%;
-	height: 100%;
-}
-.thumb img {
-	height: 130px;
-	width: 100%;
-}
-.thumb {
-	margin-top: 0px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10px;
-}
-.section-title h3 {
-	width: 260px;
-	padding-top: 30px;
-}
-.unit .found {
-	color: #FFFFFF;
-	background-color: #292929;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 0px;
-	padding-top: 28px;
-	padding-bottom: 3px;
-}
-.found p strong {
-	font-size: 25px;
-}
-footer .found {
-	background-color: #FFFFFF;
-	color: #000000;
-	margin-left: auto;
-	margin-right: auto;
-	height: 100px;
-}
-footer .edit {
-	color: #000000;
-	background-color: #FFFFFF;
-	margin-left: auto;
-	margin-right: auto;
-	height: 100px;
-}
-.edit p strong {
-	font-size: 28px;
-	padding-bottom: 0px;
-	padding-top: 0px;
-}
-.if {
-	text-align: center;
-	background-color: #292929;
-	color: #FFFFFF;
-	font-size: 22px;
-	width: 210px;
-	padding-top: 3px;
-	padding-bottom: 3px;
-}
-footer h1 {
-	margin-left: auto;
-	margin-right: auto;
-	font-size: 50px;
-	text-align: center;
-}
-.unit strong {
-	font-size: 25px;
-}
-.visual .edit {
-	color: #444444;
-	background-color: #FFFFFF;
-	font-size: 17px;
-	margin-left: auto;
-	margin-right: auto;
-	height: 115px;
-}
-.visual .pickup {
-	color: #444444;
-	background-color: #FFFFFF;
-	font-size: 17px;
-	margin-left: auto;
-	margin-right: auto;
-	height: 115px;
-	margin-bottom: 34px;
-}
-.pickup p strong {
-	font-size: 28px;
-}
-footer h3 {
-	font-size: 19px;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	padding-top: 16px;
-}
-.more h3 {
-	text-align: center;
-	background-color: #444444;
-	color: #FFFFFF;
-	margin-top: 36px;
-	margin-bottom: 36px;
-}
-
-.main-title p {
-	font-weight: bold;
-	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
-	color: #FFFFFF;
-	font-size: 46px;
-	margin-left: 0px;
-	padding-top: 10px;
-}
-.thumb h4 {
-	color: #444444;
-}
 .summary {
 	font-weight: bold;
 	font-size: 15px;
@@ -500,66 +189,23 @@ footer .thumb h4 {
 	padding-top: 0px;
 	padding-bottom: 0px;
 }
-.first-member {
-	background-color: #292929;
-	padding-left: 6px;
-	color: #FFFFFF;
-	padding-right: 6px;
-	height: 40px;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: 80%;
-	margin-top: 15px;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	margin-bottom: 10px;
-	font-size: 11px;
-}
 .footer-content {
-	width: 750px;
+	width: 875px;
 	margin-left: auto;
 	margin-right: auto;
 }
 .edit .edit-content {
 	padding-left: 12px;
 }
-.pickup .pickup-content {
-	padding-left: 10px;
-}
-.found p {
-}
 .found .found-content {
 	padding-left: 12px;
 }
-.single-title-row {
-	height: 80px;
-}
-.single-title-row h1   {
-	color: #FFFFFF;
-	margin-left: 0px;
-	padding-left: 10px;
-}
-.single-title-row h2 {
-	color: #292929;
-	text-align: center;
-	background-color: #FFFFFF;
-	width: 125px;
-}
-.video img  {
-	width: 200px;
-	padding-left: auto;
-	padding-right: auto;
-}
-.video {
-	text-align: center;
-	margin-top: 20px;
-}
 .single-member {
 	background-color: #FFFFFF;
-	width: 270px;
 	margin-left: auto;
 	margin-right: auto;
+	border-style: solid;
+	border-width: thin;
 }
 .single-member p {
 	text-align: center;
@@ -567,25 +213,6 @@ footer .thumb h4 {
 .single-member img {
 	width: 100px;
 	height: 100px;
-	margin-top: 11px;
-}
-.single-member .name {
-	font-weight: bold;
-	font-size: 23px;
-	margin-left: -18px;
-	margin-bottom: -6px;
-}
-.single-member .member-row {
-	height: 40px;
-}
-.single-member .member-image {
-	text-align: center;
-}
-.single-middle-row h2 {
-	background-color: #292929;
-	color: #FFFFFF;
-	text-align: center;
-	width: 125px;
 }
 .footer-row-top {
 	height: 80px;
@@ -596,38 +223,174 @@ footer .thumb h4 {
 	padding-left: 28px;
 	padding-right: 28px;
 }
-.aplly {
+
+
+.member-name {
+	font-size: 23px;
+	height: 100px;
+	padding-top: 35px;
+}
+.activity-image   {
+	text-align: center;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+.copy {
+	background-color: #FFFFFF;
+	text-align: center;
+	height: 50px;
+	font-size: 28px;
+}
+.apply {
+	width: 300px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-style: solid;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+@media (min-width: 768px) and (max-width: 979px) {
+.visual .visual-content {
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 750px;
+}
+.main {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+	margin-bottom: -26px;
+	width: 750px;
+}
+.first-member {
+	font-size: 11px;
+}
+footer h1 {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 50px;
+	text-align: center;
+}
+footer h3 {
+	font-size: 19px;
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
+	width: 100%;
+	padding-top: 16px;
 }
-.aplly  p {
-	font-size: 20px;
+.footer-content {
+	width: 750px;
+	margin-left: auto;
+	margin-right: auto;
 }
-.aplly .aplly-text {
-	width: 60%;
+.found .found-content {
+	padding-left: 12px;
 }
-.aplly .apply-submit {
-	margin-top: 31px;
+.footer-row-top {
+	height: 80px;
+	margin-top: 25px;
+	margin-bottom: 60px;
 }
-.information {
-	width: 400px;
+.container-padding {
+	padding-left: 28px;
+	padding-right: 28px;
+}
+.summary {
+	font-size: 12px;
+	padding-top: 6px;
+	padding-left: 1px;
+}
+.apply {
+	width: 300px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-style: solid;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+}
+
+@media (max-width: 769px) {
+.visual {
+	background-color: #72BAEE;
+        min-width: 600px;
+}
+.visual .visual-content {
+	padding-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 600px;
+}
+.main {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #FFFFFF;
+	margin-bottom: -26px;
+	width: 600px;
 }
-.event {
+.footer-content {
 	width: 600px;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #FFFFFF;
+}
+.thumb h2 {
+	background-color: #FF7772;
+	color: #FFFFFF;
+	margin-bottom: 0px;
+	padding-left: 12px;
+	font-size: 17px;
+	margin-top: 0px;
+	height: 35px;
+	border-bottom: thin solid #000000;
+}
+.thumb p {
+	color: #FFFFFF;
+	font-weight: bold;
+	margin-top: 10px;
+}
+.thumb .row-fluid {
+	background-color: #FF7772;
+	text-align: center;
+	height: 75px;
+	border-top-style: solid;
+	border-top-width: thin;
+}
+.thumb img {
+	height: 130px;
+	width: 100%;
 }
 .summary {
-        font-size: 12px;
+	font-size: 12px;
 }
-
+.pickup p strong {
+	font-size: 25px;
 }
-
+.edit p strong {
+	font-size: 25px;
+	padding-bottom: 0px;
+	padding-top: 0px;
+}
+footer {
+        min-width: 600px;
+}
+.apply {
+	width: 300px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-style: solid;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+}
 /* 
 *           Layout stylesheet
 * ======================================
