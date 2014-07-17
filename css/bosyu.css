@@ -180,6 +180,10 @@ meter {
 	width: 200px;
 	margin-left: auto;
 }
+.apply-info {
+	font-size: 17px;
+	margin-bottom: 31px;
+}
 @media (min-width: 768px) and (max-width: 979px) {
 .main {
 	margin-left: auto;
