@@ -344,6 +344,9 @@ footer h3 {
 .if {
 	width: 221px;
 }
+.visual .pickup {
+	margin-top: 0px;
+}
 
 }
 
