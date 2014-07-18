@@ -1,12 +1,14 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,600,400,300|Open+Sans+Condensed:300,700|Lato:100,300,400);
 .visual {
 	background-color: #2AADE1;
+	min-width: 620px;
 }
 .visual .visual-content {
 	padding-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 875px;
+	padding-left: 10px;
 }
 .club-name p {
 	font-weight: bold;
@@ -32,96 +34,14 @@
 .unit strong {
 	font-size: 25px;
 }
-.footer-small {
-	background-color: #F9F9F9;
-	text-align: center;
-	height: 75px;
-	color: #000000;
-	padding-top: 10px;
-}
 .section-title h3 {
 	width: 260px;
 	margin-top: 30px;
 }
-.thumb {
-	margin-top: 0px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 10px;
-}
-.thumb h2 {
-	background-color: #31B1E2;
-	color: #FFFFFF;
-	font-size: 26px;
-	height: 40px;
-	text-indent: 15px;
-	margin-bottom: 0px;
-	margin-top: 0px;
-}
-.thumb p {
-	color: #000000;
-	font-weight: bold;
-        font-size: 15px;
-}
-.thumb .footer {
-	background-color: #F2F2F2;
-	text-align: center;
-	height: 120px;
-	color: #000000;
-	padding-top: 10px;
-}
-.thumb img {
-	height: 150px;
-	width: 100%;
-}
-footer .found {
-	background-color: #E74C7E;
-	color: #FFFFFF;
-	margin-left: auto;
-	margin-right: auto;
-	height: 100px;
-}
-footer .edit {
-	color: #000000;
-	background-color: #FFFFFF;
-	margin-left: auto;
-	margin-right: auto;
-	height: 100px;
-}
-footer h1 {
-	margin-left: auto;
-	margin-right: auto;
-	font-size: 60px;
-	text-align: center;
-}
-footer h3 {
-	font-size: 21px;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	padding-top: 16px;
-}
-footer .thumb h2 {
-	background-color: #535353;
-}
-footer .thumb h4 {
-	padding-top: 0px;
-	padding-bottom: 0px;
-}
-.footer-content {
-	width: 875px;
-	margin-left: auto;
-	margin-right: auto;
-}
-.found .found-content {
-	padding-left: 12px;
-}
-.found p strong {
-	font-size: 25px;
-}
 .single-member {
 	background-color: #FFFFFF;
+	width: 120px;
+	height: 120px;
 	margin-left: auto;
 	margin-right: auto;
 	border-style: solid;
@@ -129,23 +49,19 @@ footer .thumb h4 {
 	border-radius: 12px;
 }
 .single-member p {
-	text-align: center;
 	font-weight: bold;
+	font-size: 88%;
+	margin-top: -4px;
 }
 .single-member img {
-	width: 100px;
-	height: 100px;
-}
-.footer-row-top {
-	margin-top: 42px;
-	margin-bottom: 42px;
+	width: 120px;
+	height: 120px;
+	border-radius: 8px;
 }
 .container-padding {
 	padding-left: 28px;
 	padding-right: 28px;
 }
-
-
 .member-name {
 	font-size: 23px;
 	height: 100px;
@@ -159,12 +75,6 @@ footer .thumb h4 {
 .contact {
 	font-size: 34px;
 	margin-bottom: 50px;
-}
-meter {
-	width: 56%;
-}
-.row-fluid .footer-row-bottom {
-	padding-top: 35px;
 }
 .twitter-box {
 	background-color: #29A9DF;
@@ -182,7 +92,16 @@ meter {
 }
 .apply-info {
 	font-size: 17px;
-	margin-bottom: 31px;
+	margin-bottom: 30px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.twitter-box a {
+	color: #FFFFFF;
+}
+.mail-box a {
+	color: #FFFFFF;
 }
 @media (min-width: 768px) and (max-width: 979px) {
 .main {
@@ -192,50 +111,13 @@ meter {
 	margin-bottom: -26px;
 	width: 750px;
 }
-.footer-small {
-	text-align: center;
-	height: 65px;
-	color: #000000;
-	padding-top: 10px;
-}
-footer h1 {
-	margin-left: auto;
-	margin-right: auto;
-	font-size: 50px;
-	text-align: center;
-}
-footer h3 {
-	font-size: 19px;
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
-	padding-top: 16px;
-}
-.footer-content {
-	width: 750px;
-	margin-left: auto;
-	margin-right: auto;
-}
-.found .found-content {
-	padding-left: 12px;
-}
-.footer-row-top {
-	height: 80px;
-	margin-top: 35px;
-	margin-bottom: 35px;
-}
-.container-padding {
-	padding-left: 28px;
-	padding-right: 28px;
-}
 .summary {
 	font-size: 12px;
 	padding-top: 6px;
 	padding-left: 1px;
 }
-.row-fluid.footer-row-bottom {
-	padding-top: 25px;
+.visual .visual-content {
+	width: 750px;
 }
 }
 
@@ -246,55 +128,17 @@ footer h3 {
 	margin-bottom: -26px;
 	width: 600px;
 }
-.found p strong {
-	font-size: 21px;
+.twitter-box {
+	width: 150px;
 }
-.footer-content {
-	width: 600px;
-	margin-left: auto;
-	margin-right: auto;
+.mail-box {
+	width: 150px;
 }
-.thumb h2 {
-	font-size: 18px;
-	height: 26.8px;
-	text-indent: 10px;
-	padding-top: 0px;
-}
-.thumb p {
-        font-size: 9px;
-}
-.thumb .footer {
-	height: 80.3px;
-	padding-top: 6.6px;
-}
-.thumb img {
-	height: 100px;
-}
-.footer-small {
-	height: 55px;
-	padding-top: 10px;
-}
-.summary {
-	font-size: 12px;
-}
-footer {
-        min-width: 600px;
-}
-footer h1 {
-	font-size: 40px;
-}
-footer h3 {
+.apply-info {
 	font-size: 15px;
 }
-.row-fluid.footer-row-top {
-	margin-top: 16px;
-	margin-bottom: 16px;
-}
-footer .found {
-	height: 90px;
-}
-.row-fluid.footer-row-bottom {
-	padding-top: 11px;
+.visual .visual-content {
+	width: 600px;
 }
 }
 /* 
