@@ -103,6 +103,9 @@
 .mail-box a {
 	color: #FFFFFF;
 }
+.members {
+	margin-bottom: 50px;
+}
 @media (min-width: 768px) and (max-width: 979px) {
 .main {
 	margin-left: auto;
