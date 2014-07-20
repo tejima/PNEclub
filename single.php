@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en" ng-app="app"  ng-controller="Ctrl">
   <head>
     <meta charset="utf-8">
     <title>ふじみ野農園部</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/angular.min.js"></script>
-    <script src="js/app.js"></script>
+    <?php require_once 'tw-activity.php'; ?>
+    <script>
+      var myApp = angular.module('app', []);
+      function Ctrl($scope) {
+        $scope.members = [ 
+          {"screen_name":"koiwaka_bot"}, 
+          {"screen_name":"sho_qu"}, 
+          {"screen_name":"kroroooo"}];
+        $scope.club_info = 
+          {"name":"ふじみ野農園部", "keyword":"農園", "leader_screen_name":"sho_qu", "leader_address":"kpdyd122@gmail.com", "url":"green.pne.jp"};
+      }
+      function CtrlB($scope) {
+          $scope.images = <?php echo $images; ?>;
+      }
+    </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <meta name="description" content="Responsive HTML template for Your company">
     <meta name="author" content="Oskar Żabik (oskar.zabik@gmail.com)">
 
-    <!-- Le styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/bosyu.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -19,35 +33,8 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Le favicon -->
     <link rel="shortcut icon" href="favicon.ico">
   </head>
-
-<div ng-init="club_info = 
-{ name:'ふじみ野農園部',
-  keyword:'農園',
-  leader_screen_name:'sho_qu',
-  leader_address:'kpdyd122@gmail.com',
-  url:'green.pne.jp'
-}">
-</div>
-
-<div ng-init="members = [ 
-{screen_name:'koiwaka_bot'},
-{screen_name:'sho_qu'},
-{screen_name:'kroroooo'}
-]">
-</div>
-
-<div ng-init="images = [ 
-{name:'soccer1.jpg'},
-{name:'soccer2.jpg'},
-{name:'soccer3.jpg'},
-{name:'soccer4.jpg'}
-]">
-</div>
-
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
   <body>
         <div class="visual">   
@@ -63,19 +50,8 @@
                 </div>
               </div>
             </div>
-<!--  
-            <div class="row-fluid">
-              <div class="offset10 span2">
-                <div class="copy">
-                  <p>まねる</p>
-                </div>  
-              </div>
-            </div>
--->
           </div>
         </div>    
-
-
 
 <div class="main">
 
@@ -97,17 +73,10 @@
       <div class="section-title">
         <h3>活動風景</h3>
       </div>
-      <div class="row-fluid">
+      <div class="row-fluid" ng-controller="CtrlB">
         <div class="span3" ng-repeat="image in images">
           <div class="activity-image">
-            <img src="img/{{image.name}}">
-          </div>
-        </div>
-      </div>
-      <div class="row-fluid">
-        <div class="span3" ng-repeat="image in images">
-          <div class="activity-image">
-            <img src="img/{{image.name}}">
+            <img src="{{image.name}}">
           </div>
         </div>
       </div>  
@@ -161,30 +130,7 @@
   <div class="span2">
   </div>
 </div>
-<!--
-      <div class="section-title">
-        <h3>入部届け</h3>
-      </div>
 
-              <div class="apply">
-                <h1>入部届</h1>
-                <p>私は乙女の工作部に<br>入部することを希望します。</p>
-                <p>
-                    乙女の工作部<br>
-                    活動費：毎月3,000円
-                <br>定期活動：月3〜4回 通常活動</p>
-                <form class="form" role="form" action="" method="POST">
-                  <input type="hidden" name="" value="1">
-                  <div class="form-group">
-                    <label>メールアドレス</label>
-                    <input type="email" id="inputEmail3" placeholder="Email" name="">
-                  </div>
-                  <div class="form-group">
-                    <button type="submit" class="btn btn-lg btn-success">入部申し込みする</button>
-                  </div>
-                </form>
-              </div>
--->
     </div><!-- .container -->
 
 </div>
