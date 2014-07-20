@@ -60,7 +60,7 @@
       <div class="unit">
         <div class="row-fluid">
           <div class="span12">
-            <p><strong>{{club_info.name}}とは?</strong></p>
+            <strong>{{club_info.name}}とは?</strong>
           </div>
         </div>
         <div class="row-fluid">
