@@ -46,7 +46,7 @@
 	width: 100%;
 }
 .thumb {
-	margin-top: 10px;
+	margin-top: 0px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 30px;
@@ -54,7 +54,7 @@
 .thumb h2 {
 	background-color: #31B1E2;
 	color: #FFFFFF;
-	font-size: 26px;
+	font-size: 22px;
 	height: 40px;
 	text-indent: 15px;
 	margin-bottom: 0px;
@@ -206,7 +206,7 @@ meter {
 	width: 750px;
 }
 .thumb h2 {
-	font-size: 23px;
+	font-size: 19px;
 	height: 34px;
 	text-indent: 10px;
 }
@@ -279,7 +279,7 @@ meter {
 	font-size: 21px;
 }
 .thumb h2 {
-	font-size: 18px;
+	font-size: 14px;
 	height: 26.8px;
 	text-indent: 10px;
 	padding-top: 0px;
