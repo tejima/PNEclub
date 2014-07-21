@@ -2,15 +2,10 @@
 <html lang="en" ng-app="app"  ng-controller="Ctrl">
   <head>
     <meta charset="utf-8">
-    <title>{{club_info.name}}</title>
+    <title>ふじみ野農園部</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive HTML template for Your company">
-    <meta name="author" content="Oskar Żabik (oskar.zabik@gmail.com)">
-
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/bosyu.css">
-    <link rel="stylesheet" href="css/footer.css">
     <script src="js/angular.min.js"></script>
+    <?php require_once 'tw-activity.php'; ?>
     <script>
       var myApp = angular.module('app', []);
       function Ctrl($scope) {
@@ -22,14 +17,16 @@
           {"name":"ふじみ野農園部", "keyword":"農園", "leader_screen_name":"sho_qu", "leader_address":"kpdyd122@gmail.com", "url":"green.pne.jp"};
       }
       function CtrlB($scope) {
-        $scope.images = [ 
-          {"name":"http://pbs.twimg.com/media/Bs7AAuvCQAAHXPQ.jpg"},
-          {"name":"http://pbs.twimg.com/media/Bs6_4njCcAERx4G.jpg"}, 
-          {"name":"http://pbs.twimg.com/media/Bs6_xZ6CEAIn4pD.jpg"}, 
-          {"name":"http://pbs.twimg.com/media/Bs659qUCUAE4XUp.jpg"}];
+          $scope.images = <?php echo $images; ?>;
       }
     </script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <meta name="description" content="Responsive HTML template for Your company">
+    <meta name="author" content="Oskar Żabik (oskar.zabik@gmail.com)">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bosyu.css">
+    <link rel="stylesheet" href="css/footer.css">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -87,12 +84,12 @@
       <div class="section-title">
         <h3>メンバー</h3>
       </div>
-    
-      <div class="row-fluid members">
+
+      <div class="row-fluid">
         <div class="span4"  ng-repeat="member in members">
           <div class="single-member">
               <a href="https://twitter.com/{{member.screen_name}}"><img src="https://twitter.com/api/users/profile_image?screen_name={{member.screen_name}}&size=original"></p>
-              <p align="center"><a href="https://twitter.com/{{member.screen_name}}">＠{{member.screen_name}}</p></a>
+              <p align="center"><a href="https://twitter.com/{{member.screen_name}}">＠{{member.screen_name}}</a></p>
           </div>
         </div>
       </div>
