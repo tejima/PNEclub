@@ -139,8 +139,7 @@
 .summary {
 	font-weight: bold;
 	font-size: 15px;
-	margin-left: 10px;
-	margin-right: 3px;
+	height: 80px;
 }
 .found .found-content {
 	padding-left: 12px;
@@ -236,6 +235,7 @@ meter {
 	font-size: 12px;
 	padding-top: 6px;
 	padding-left: 1px;
+	height: 60px;
 }
 .if {
 	width: 221px;
@@ -302,6 +302,9 @@ meter {
 .if {
 	width: 174px;
 	font-size: 18px;
+}
+.summary   {
+	height: 48px;
 }
 }
 /* 
