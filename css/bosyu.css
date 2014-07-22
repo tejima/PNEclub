@@ -77,10 +77,24 @@
 	margin-bottom: 50px;
 }
 .twitter-box {
-	 text-align: center;
+  background-color: #29A9DF;
+  color: #FFFFFF;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .mail-box   {
-   text-align: center;
+  color: #FFFFFF;
+  background-color: #29A9DF;
+  margin-right: auto;
+  width: 200px;
+  margin-left: auto;
+}
+.twitter-box a {
+  color: #FFFFFF;
+}
+.mail-box a {
+  color: #FFFFFF;
 }
 .apply-info {
 	font-size: 17px;
@@ -142,6 +156,12 @@
 }
 .visual .visual-content {
 	width: 600px;
+}
+.twitter-box {
+  width: 150px;
+}
+.mail-box {
+  width: 150px;
 }
 }
 /* 
