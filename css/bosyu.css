@@ -35,7 +35,7 @@
 	font-size: 25px;
 }
 .section-title h3 {
-	width: 260px;
+	width: 375px;
 	margin-top: 30px;
 }
 .single-member {
@@ -77,18 +77,10 @@
 	margin-bottom: 50px;
 }
 .twitter-box {
-	background-color: #29A9DF;
-	color: #FFFFFF;
-	width: 200px;
-	margin-left: auto;
-	margin-right: auto;
+	 text-align: center;
 }
 .mail-box   {
-	color: #FFFFFF;
-	background-color: #29A9DF;
-	margin-right: auto;
-	width: 200px;
-	margin-left: auto;
+   text-align: center;
 }
 .apply-info {
 	font-size: 17px;
@@ -96,12 +88,6 @@
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-}
-.twitter-box a {
-	color: #FFFFFF;
-}
-.mail-box a {
-	color: #FFFFFF;
 }
 .members {
 	margin-bottom: 50px;
@@ -119,14 +105,12 @@
 	margin-top: 6px;
 	text-indent: 6px;
 }
-.aplly {
-	font-size: 35px;
+.aplly-box {
+	text-align: center;
+	margin-bottom: 30px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 40%;
-	margin-bottom: 30px;
-	background-color: #FF895E;
-	color: #FFFFFF;
+	width: 310px;
 }
 @media (min-width: 768px) and (max-width: 979px) {
 .main {
@@ -152,12 +136,6 @@
 	margin-right: auto;
 	margin-bottom: -26px;
 	width: 600px;
-}
-.twitter-box {
-	width: 150px;
-}
-.mail-box {
-	width: 150px;
 }
 .apply-info {
 	font-size: 15px;

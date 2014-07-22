@@ -4,12 +4,12 @@
 	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	color: #FFFFFF;
 	font-size: 46px;
-	margin-left: 11px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
 .visual {
 	background-color: #2AADE1;
+  min-width: 640px;
 }
 .visual .visual-content {
 	margin-left: auto;
@@ -193,7 +193,6 @@ meter {
 }
 @media (min-width: 768px) and (max-width: 979px) {
 .visual .visual-content {
-	padding-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 750px;
@@ -248,14 +247,10 @@ meter {
 }
 
 @media (max-width: 769px) {
-.visual {
-        min-width: 600px;
-}
 .visual .visual-content {
-	padding-bottom: 20px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 600px;
+	width: 640px;
 }
 .visual .pickup {
 	font-size: 14px;
