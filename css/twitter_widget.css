@@ -1,0 +1,61 @@
+.tw-widget {
+	width: 380px;
+	border-left-style: ridge;
+	border-right-style: ridge;
+	border-bottom-style: ridge;
+	margin-left: auto;
+	margin-right: auto;
+}
+.tw-tweet {
+	border-top-style: ridge;
+}
+.tw-tweet-text {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.tw-info {
+	margin-top: 10px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+.tw-avatar img {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.tw-reply {
+}
+.tw-contact img {
+	margin-bottom: 2px;
+	margin-right: 2px;
+}
+.tw-contact  {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+.tw-fav {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.tw-reply {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+a:hover {
+	text-decoration: none;
+}
+.tw-name {
+	color: #000000;
+	margin-right: 6px;
+}
+.tw-screen-name {
+	color: rgba(137,137,137,0.70);
+	margin-right: 6px;
+}
+.tw-datetime {
+	color: rgba(137,137,137,0.70);
+}
