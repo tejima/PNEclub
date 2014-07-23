@@ -1,62 +1,214 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:800,600,400,300|Open+Sans+Condensed:300,700|Lato:100,300,400);
-footer{
-  background-color: #2AADE1;
-  min-width: 960px;
+footer {
+	background-color: #2AADE1;
+	min-width: 960px; 
 }
 footer .footer-content {
-  margin-left: auto;
-  margin-right: auto;
-  width: 960px;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
 }
 footer .thumb {
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 footer .thumb h2 {
-	background-color: #31B1E2;
+	background-color: #535353;
 	color: #FFFFFF;
+	font-size: 23px;
+	height: 50px;
+	text-indent: 15px;
+	margin-bottom: 0px;
+	margin-top: 0px;
 }
 footer .thumb img {
+	height: 150px;
+	width: 100%;
 }
 footer .thumb p {
 	color: #000000;
+	font-size: 15px;
 }
 footer .summary {
+	font-size: 15px;
+	height: 80px;
 }
 footer .thumb .footer {
 	background-color: #F2F2F2;
 	text-align: center;
+	height: 120px;
 	color: #000000;
-}
-footer .thumb h2 {
-	background-color: #535353;
+	padding-top: 10px;
 }
 footer .thumb h4 {
 	color: #444444;
 }
 footer .found {
-	background-color: #E74C7E;
 	color: #FFFFFF;
+	background-color: #E74C7E;
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: 0px;
+	padding-top: 28px;
+	padding-bottom: 3px;
 }
 footer .found p strong {
+	font-size: 25px;
 }
 footer h1 {
 	margin-left: auto;
 	margin-right: auto;
+	font-size: 60px;
+	text-align: center;
+	color: #FFFFFF;
+}
+footer h3 {
+	font-size: 21px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-top: 16px;
+	color: #FFFFFF;
+}
+footer .found .found-content {
+	padding-left: 12px;
+}
+footer .footer-row-top {
+	margin-top: 42px;
+	margin-bottom: 42px;
+}
+footer .row-fluid .footer-row-bottom {
+	padding-top: 35px;
+}
+meter {
+	width: 56%;
+}
+@media (min-width: 321px) and (max-width: 768px) {
+footer {
+	min-width: 768px; 
+}
+footer .footer-content {
+	width: 750px;
+}
+footer .thumb h2 {
+	font-size: 19px;
+	height: 42px;
+	text-indent: 10px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+footer .thumb p {
+    font-size: 12px;
+}
+footer .thumb .footer {
+	height: 102px;
+	padding-top: 8.4px;
+}
+footer .thumb img {
+	height: 128px;
+}
+footer h1 {
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 50px;
 	text-align: center;
 }
 footer h3 {
+	font-size: 19px;
 	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-top: 16px;
+}
+footer .footer-content {
+	width: 750px;
 	margin-left: auto;
 	margin-right: auto;
 }
 footer .found .found-content {
+	padding-left: 12px;
 }
 footer .footer-row-top {
+	height: 80px;
+	margin-top: 35px;
+	margin-bottom: 35px;
 }
-footer .row .footer-row-bottom {
+footer .summary {
+	font-size: 12px;
+	padding-top: 6px;
+	padding-left: 1px;
+	height: 60px;
 }
-meter {
+footer .row-fluid.footer-row-bottom {
+	padding-top: 25px;
+}
+}
+
+@media (max-width: 320px) {
+footer {
+	min-width: 320px; 
+}
+footer .footer-content {
+	width: 310px;
+}
+footer .found p strong {
+	font-size: 10px;
+}
+footer .footer-content {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+footer .thumb h2 {
+	font-size: 9px;
+	text-indent: 5px;
+	line-height: 21px;
+	height: 22px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+footer .thumb p {
+ 	font-size: 7px;
+	margin-bottom: 0px;
+}
+footer .thumb .footer {
+	height: 72px;
+	padding-top: 8.4px;
+}
+footer .thumb img {
+	height: 55px;
+}
+footer .summary {
+	font-size: 12px;
+	height: 50px;
+	line-height: 9px;
+}
+footer h1 {
+	font-size: 19px;
+}
+footer h3 {
+	font-size: 7px;
+	padding-top: 2px;
+}
+footer .row-fluid.footer-row-top {
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+footer .found {
+	height: 40px;
+	padding-top: 0px;
+}
+footer .found .found-content {
+	line-height: 7px;
+	font-size: 9px;
+	padding-left: 4px;
+	padding-top: 8px;
+}
+footer .row-fluid.footer-row-bottom {
+	padding-top: 11px;
+}
 }
