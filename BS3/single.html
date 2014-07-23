@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app"  ng-controller="CtrlClubInfo">
+  <head>
+    <meta charset="utf-8">
+    <title>{{club_info.name}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+    <script>
+          function jsonget() {
+          $.ajax({
+              url: "json.php", 
+              dataType: 'jsonp',
+              data: {
+                  domain: otome
+              },
+              jsonp: 'jsoncallback',
+              success: function( data ) {
+                  alert(data);
+              },
+              error: function() {
+                  alert('error');
+              }
+            });
+          }
+      var myApp = angular.module('app', []);
+      var data = { 
+          members:[{"screen_name":"ayapon6344"}, 
+                   {"screen_name":"ayumimiwa"},
+                   {"screen_name":"aym_bamboo"},
+                   {"screen_name":"kyouya6334"},  
+                   {"screen_name":"Kanallia777"}],
+          club_info:{"name":"乙女の工作部", "keyword":"工作", "leader_screen_name":"otomenokousakub", "leader_address":"otomenokousakubu@gmail.com", "url":"http://otome.cqc.jp/"},
+          images:[{"name":"http://pbs.twimg.com/media/BtJhgIPCEAEPVMn.jpg"},
+                   {"name":"http://pbs.twimg.com/media/BswaVQ-CAAEO4PH.jpg"},
+                   {"name":"http://pbs.twimg.com/media/Bslg2azCUAICgUA.jpg"},
+                   {"name":"http://pbs.twimg.com/media/BsBC6NCCAAEZUgi.jpg"}],
+tweets:[{"tweet_id":"491567871651115008","datetime":"17\u6642\u9593\u524d","text":"RT @ayapon6344: \u4e59\u5973\u306e\u5de5\u4f5c\u90e8\u3001\u9031\uff12\u304f\u3089\u3044\u3067\u884c\u304d\u305f\u3044\u306a\u3041 s\u30fe(:3\uff89\uff7c\u30fe)\uff89\uff7c","screen_name":"otomenokousakub","name":"\u4e59\u5973\u306e\u5de5\u4f5c\u90e8"},
+{"tweet_id":"491564901261795328","datetime":"17\u6642\u9593\u524d","text":"\u4e59\u5973\u306e\u5de5\u4f5c\u90e8\u3001\u9031\uff12\u304f\u3089\u3044\u3067\u884c\u304d\u305f\u3044\u306a\u3041\u30fe(:3\uff89\uff7c\u30fe)\uff89\uff7c","screen_name":"ayapon6344","name":"\u3042\u3084@\u30d1\u30f3\u304f\u305a"},
+{"tweet_id":"491501965361172480","datetime":"22\u6642\u9593\u524d","text":"RT @otomenokousakub: \u672c\u65e5\u4e59\u5973\u306e\u5de5\u4f5c\u90e8\u3001\u901a\u5e38\u6d3b\u52d5\u306e\u65e5\u3067\u3059\u266a\u65b0\u5bbf\u306718:00\u301c21:00\u307e\u3067\uff01","screen_name":"aym_bamboo","name":"\u30a2\u30e6\u30df 6/29\u301c\u8c37\u4e2d\u30b8\u30f3\u30b8\u30e3\u30fc\u82b1\u5c55"},
+{"tweet_id":"491501922218557440","datetime":"22\u6642\u9593\u524d","text":"\u672c\u65e5\u4e59\u5973\u306e\u5de5\u4f5c\u90e8\u3001\u901a\u5e38\u6d3b\u52d5\u306e\u65e5\u3067\u3059\u266a\u65b0\u5bbf\u306718:00\u301c21:00\u307e\u3067\uff01","screen_name":"otomenokousakub","name":"\u4e59\u5973\u306e\u5de5\u4f5c\u90e8"},
+]
+                };
+      function CtrlClubInfo($scope) {
+          $scope.club_info = data.club_info;
+      }
+      function CtrlImages($scope) {
+          $scope.images = data.images;
+      }
+      function CtrlMembers($scope) {
+          $scope.members = data.members;
+      }
+      function CtrlTweets($scope) {
+          $scope.tweets = data.tweets;
+      }
+    </script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <meta name="description" content="Responsive HTML template for Your company">
+    <meta name="author" content="Oskar Żabik (oskar.zabik@gmail.com)">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bosyu.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/twitter_widget.css">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico">
+  </head>
+
+  <body>
+    <?php print_r($scope); ?>
+        <div class="visual">   
+          <div class="visual-content">
+            <div class="row">
+              <div class="span12">
+              </div>
+            </div>
+            <div class="row">
+              <div class="span12">
+                <div class="club-name">
+                  <p>{{club_info.name}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>    
+
+<div class="main">
+
+    <div class="container container-padding">
+
+      <div class="unit">
+        <div class="row">
+          <div class="span12">
+            <p><strong>{{club_info.name}}とは?</strong></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span12">
+                       <p>{{club_info.name}}とは趣味に一生懸命な人たちが
+                        {{club_info.keyword}}を精一杯楽しんでいる活動です。
+                        {{club_info.keyword}}が大好きなメンバーたちが集まって、
+                        {{club_info.keyword}}をひたすら楽しんでいます。
+                        もしあなたが{{club_info.keyword}}好きならば、
+                        私たちと一緒に{{club_info.keyword}}行いませんか？</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <h3>活動風景</h3>
+      </div>
+      <div class="row" ng-controller="CtrlImages">
+        <div class="span3" ng-repeat="image in images">
+          <div class="activity-image">
+            <img ng-src="{{image.name}}">
+          </div>
+        </div>
+      </div>  
+
+      <div class="section-title">
+        <h3>メンバー</h3>
+      </div>
+
+      <div class="row members" ng-controller="CtrlMembers">
+        <div class="span2"  ng-repeat="member in members">
+          <div class="single-member">
+              <a src="https://twitter.com/{{member.screen_name}}"><img ng-src="https://twitter.com/api/users/profile_image?screen_name={{member.screen_name}}&size=original"></p>
+              <p align="center"><a ng-src="https://twitter.com/{{member.screen_name}}">＠{{member.screen_name}}</p></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <h3>募集案内</h3>
+      </div>
+<div class="apply-info">
+<p align="center">参加に興味のある方はツイートにファボ☆で詳細情報をお送りします！</p>
+<p align="center">質問などあればリプライか連絡フォームからご連絡おねがいします。</p>
+</div>
+
+<div class="tw-widget" ng-controller="CtrlTweets">
+  <div class="tw-timeline">
+    <div class="tw-tweet" ng-repeat="tweet in tweets"><!--ng-repeat-->
+    <div class="tw-tweet-wrap">
+      <div class="tw-avatar">
+        <div class="row-fluid">
+          <div class="span2">
+            <a href="http://twitter.com/intent/user?screen_name={{tweet.screen_name}}" target="_blank">
+              <img ng-src="https://twitter.com/api/users/profile_image?screen_name={{tweet.screen_name}}&size=original" alt="{{tweet.name}}">
+            </a>
+          </div>
+          <div class="span10">
+            <div class="tw-info">  
+              <a class="tw-user tw-name" href="https://twitter.com/{{tweet.screen_name}}" target="_blank">{{tweet.name}}</a>
+              <a class="tw-user tw-screen-name" href="https://twitter.com/{{tweet.screen_name}}" target="_blank">@{{tweet.screen_name}}</a>
+              <a class="tw-datetime">{{tweet.datetime}}</a>
+            </div>
+            <div ng-bind-html="tweet.text" class="tw-tweet-text">
+      　      {{tweet.text}}
+            </div>
+          </div>  
+        </div>  
+      </div>
+      <div class="tw-contact">
+      　 <a src="http://twitter.com/intent/tweet?in_reply_to={{tweet.tweet_id}}" class="tw-reply" target="_blank">      
+            <button type="button" class="btn btn-default btn-lg"><img src="img/reply.png">返信</button>       
+         </a>
+         
+         <a href="https://twitter.com/intent/favorite?tweet_id={{tweet.tweet_id}}" class="tw-fav" target="_blank">
+            <button type="button" class="btn btn-default btn-lg"><img src="img/star.png">お気に入り</button>
+         </a>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="section-title">
+        <h3>連絡</h3>
+      </div>
+
+<div class="row contact">
+  <div class="offset2 span4">
+    <div class="twitter-box">
+      <a src="http://twitter.com/share?text=@{{club_info.leader_screen_name}}">
+        <p align="center">Twitter</p>
+      </a>
+    </div>
+  </div>
+  <div class="span4">
+    <div class="mail-box">
+      <a href="mailto:{{club_info.leader_address}}?subject=[{{club_info.name}}]詳細希望&amp;body=">
+        <p align="center">メール</p>
+      </a>
+    </div>
+  </div>
+  <div class="span2">
+  </div>
+</div>
+
+    </div><!-- .container -->
+
+</div>
+
+  <footer>
+    <div class="footer-content">  
+      <div class="container">
+        <div class="row">
+          <div class="span8">
+            <div class="row footer-row-top">
+              <div class="span4">
+                <h1>PNE.club</h1>
+              </div>
+              <div class="span4">
+                <h3>新しいクラブ、増設中!>></h3>
+              </div>
+            </div>
+            <div class="row footer-row-bottom">
+              <div class="span4">
+              </div>
+              <div class="span4">
+                <div class="found">
+                  <div class="found-content">
+                    <p><br>新しく</p>
+                    <p><strong>クラブをつくる</strong></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="span4">
+            <div class="thumb">
+              <h2>おしゃべり部</h2>
+              <img src="img/piano.jpg" alt="image">
+              <div class="footer">
+                  <p class="summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
+                  <p>目標&nbsp;&nbsp;<meter value="15" low="5" high="10" max="15" optimum="15"></meter>&nbsp;&nbsp;15人</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/setup.js"></script>
+
+  </body>
+</html>
