@@ -54,36 +54,36 @@
         }
     </script>
     <script type="text/ng-template" id="widget_template.html">
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div class="thumbnail thumbnail-club">
-                        <div class="title">{{widget.name}}</div>
-                        <img ng-src="{{widget.img}}" alt="...">
-                        <div class="caption">
-                            <p>{{widget.caption}}</p>
-                            <div class="progress-user">
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <span ng-repeat ="i in getNumber(widget.member_new) track by $index" class="text-primary glyphicon glyphicon-user"></span>
-                                        <span ng-repeat ="i in getNumber(widget.member_last) track by $index" class="text-muted glyphicon glyphicon-user"></span>
-                                    </div>
-                                </div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="thumbnail thumbnail-club">
+                <div class="title">{{widget.name}}</div>
+                <img ng-src="{{widget.img}}" alt="...">
+                <div class="caption">
+                    <p>{{widget.caption}}</p>
+                    <div class="progress-user">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <span ng-repeat ="i in getNumber(widget.member_new) track by $index" class="text-primary glyphicon glyphicon-user"></span>
+                                <span ng-repeat ="i in getNumber(widget.member_last) track by $index" class="text-muted glyphicon glyphicon-user"></span>
+                            </div>
+                        </div>
 
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-4">
-                                    <div class="thumbnail-club-tip">募集枠</div> <strong>{{widget.member_last + widget.member_new}}人</strong>
-                                </div>
-                                <div class="col-xs-4">
-                                    <div class="thumbnail-club-tip">新入部員</div> <strong>{{widget.member_new}}人</strong>
-                                </div>
-                                <div class="col-xs-4">
-                                    <div class="thumbnail-club-tip">部員総数</div>
-                                    <strong>{{widget.member_total}}人</strong>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="thumbnail-club-tip">募集枠</div> <strong>{{widget.member_last + widget.member_new}}人</strong>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="thumbnail-club-tip">新入部員</div> <strong>{{widget.member_new}}人</strong>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="thumbnail-club-tip">部員総数</div>
+                            <strong>{{widget.member_total}}人</strong>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
     </script>
 </head>
 
