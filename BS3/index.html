@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myapp" lang="en">
+<html ng-app="myapp" lang="en" ng-controller="WidgetListCtrl">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,25 +20,29 @@
     <script>
         var app = angular.module('myapp', []);
         app.controller('WidgetListCtrl',   ['$scope', function($scope) {
-            $scope.data = data;
+            $scope.data = widget_data_factory();
 
             $scope.getNumber = function(num) {
                return new Array(num);   
             }
         }]);
-        var data = {
-            top_widget_list: widget_mock_factory(2),
-            hot_widget_list: widget_mock_factory(3),
-            new_widget_list: widget_mock_factory(4),
-            other_widget_list: widget_mock_factory(4),
-            footer_widget_list: widget_mock_factory(1),
-        };
-        function widget_mock_factory(num){
+        function widget_data_factory(){
+            var result = {
+                top_widget_list: widget_mock(2),
+                hot_widget_list: widget_mock(3),
+                new_widget_list: widget_mock(4),
+                other_widget_list: widget_mock(4),
+                footer_widget_list: widget_mock(1),
+            };
+            return result;
+        }
+        function widget_mock(num){
             var result = [];
+            var rand_str = "じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶら";
             for (i = 0; i < num; i++) { 
                 mock = {
-                    'name':Math.random().toString(36).slice(Math.floor(Math.random()*8)) + '部',
-                    'caption':'可愛い、作れたらをいっしょにかたちに',
+                    'name':rand_str.slice(-1 * Math.floor(Math.random()*8 + 3)) + '部',
+                    'caption':rand_str.slice(-1 * Math.floor(Math.random()*80 + 20)),
                     'member_total':Math.floor(Math.random()*50+1),
                     'member_last':Math.floor(Math.random()*5+1),
                     'member_new':Math.floor(Math.random()*5+1),
@@ -49,7 +53,6 @@
             return result;
         }
     </script>
-
     <script type="text/ng-template" id="widget_template.html">
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="thumbnail thumbnail-club">
@@ -84,12 +87,12 @@
     </script>
 </head>
 
-<body ng-controller="WidgetListCtrl">
+<body>
     <div class="bg-primary">
         <div class="container">
             <div class="row">
                 <div class="col-md-10">
-                    <h1 style="color: white; font-size: 400%;">PNE.club</h1>
+                    <h1 class="pneclub-logo">PNE.club</h1>
                 </div>
             </div>
             <div class="row">
@@ -100,7 +103,7 @@
                 <div class="col-md-4 col-sm-4">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="main-anchor-div" style="background: url(http://p.pne.jp/d/201407232130.png)">
+                            <div class="main-anchor-div" style="background: url(http://p.pne.jp/d/201407232130.png); background-repeat: no-repeat;">
                                 ＞＞特集
                                 <br>
                                 アンサンブル
@@ -111,7 +114,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="main-anchor-div" style="background: url(http://p.pne.jp/d/201407232142.png)">
+                            <div class="main-anchor-div" style="background: url(http://p.pne.jp/d/201407232142.png); background-repeat: no-repeat;">
                                 ＞＞特集
                                 <br>
                                 フットサル
@@ -143,8 +146,8 @@
                 </p>
             </div>
             <div class="col-md-4 col-sm-4" >
-                <div class="clearfix" style="background-color: #E74C7E; width: 100%; height:100px; margin-bottom: 30px;">
-                    <p style="margin-top: 50px; margin-left: 15px; color: white; font-size: 200%; font-weight: bold;">クラブをつくる</p>
+                <div class="divbtn-newclub">
+                    <span>クラブをつくる</span>
                 </div>
             </div>
         </div>
@@ -202,8 +205,8 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-3">
-                                <div class="footer-title" style="height: 100px;">
-                                    <h1 class="title text-center">PNE.club</h1>
+                                <div class="footer-title">
+                                    <p class="text-center">PNE.club</p>
                                 </div>
                             </div>
                         </div>
@@ -212,8 +215,8 @@
                     <div class="col-md-4 col-sm-4 col-xs-12">
                         <div class="row">
                             <div class="col-md-12 col-sm-12 hidden-xs">
-                                <div class="new-club"  style="height: 100px; margin-top: 69.3px;">
-                                    <p class="text-center">新しいクラブ、増設中!>></p>
+                                <div class="footer-newclub">
+                                    <p class="text-center">新しいクラブ、増加中! >></p>
                                 </div>
                             </div>
                         </div>
