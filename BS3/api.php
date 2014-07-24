@@ -15,6 +15,7 @@ $tw_obj = new TwitterOAuth (
   $access_token_secret);
 
 $leader_screen_name = $_POST["leader_screen_name"];
+$club_name_long = $_POST["club_name_long"];
 
 //募集案内のツイート取得
 $rest_api = 'https://api.twitter.com/1.1/search/tweets.json';
@@ -65,7 +66,7 @@ $tweet_list  = json_encode($tweets,JSON_UNESCAPED_SLASHES);
 $rest_api = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 $method = 'GET';
 $options = array (
-  'screen_name'=> 'sho_qu',
+  'screen_name'=> $club_name_long,
   'count'=> 100,
   'include_entities'=> true);
 
@@ -88,5 +89,5 @@ foreach ($tw_obj_request_json as $item) {
     break;
   }
 }
-$image_list  = json_encode($images,JSON_UNESCAPED_SLASHES);
+echo $_POST['leader_screenname'];
 ?>
