@@ -16,15 +16,10 @@
 	bottom: 5px;
 }
 .pneclub-logo{
-<<<<<<< HEAD
 	font-size: 400%;
 	font-weight: 500;
 	margin-top: 25px;
 	margin-bottom: 25px;
-=======
-	 color: white;
-	 font-size: 400%;
->>>>>>> FETCH_HEAD
 }
 .bg-primary {
 	background-color: #2aade1;
@@ -32,13 +27,8 @@
 
 footer .footer-title {
 	font-size: 400%;
-<<<<<<< HEAD
 	height: 345px;
 	line-height: 345px;
-=======
-	height: 280px;
-	line-height: 280px;
->>>>>>> FETCH_HEAD
 	font-weight: 500;
 }
 .footer-title p{
@@ -50,26 +40,18 @@ footer .footer-title {
 
 .footer-newclub p {
 	font-size: 120%;
-<<<<<<< HEAD
 	height: 172.5px;
 	line-height: 172.5px;
-=======
-	height: 280px;
-	line-height: 280px;
->>>>>>> FETCH_HEAD
 }
 .found p {
 	padding-top: 44px;
 }
-<<<<<<< HEAD
 .found {
 	background-color: #E74C7E;
 	height: 100px;
 	min-width: 0px;
 	margin-top: 36.25px;
 }
-=======
->>>>>>> FETCH_HEAD
 
 .thumbnail-club{
 	border-radius: 0;
@@ -120,7 +102,6 @@ footer .footer-title {
 	.thumbnail-club-tip{
 	font-size: 80%;
 	}
-<<<<<<< HEAD
 	.footer-newclub p {
 	font-size: 120%;
 	height: 146.5px;
@@ -159,10 +140,6 @@ footer .footer-title {
 	line-height: 60px;
     }
 } 
-=======
-
-}
->>>>>>> FETCH_HEAD
 @media (min-width: 992px) {
 	.progress-user {
 		font-size: 150%;
@@ -196,7 +173,6 @@ footer .footer-title {
 footer{
 	height: 300px;
 
-<<<<<<< HEAD
 }
 
 /* single.php用 */
@@ -270,7 +246,3 @@ footer{
 		margin-right:5px;
 		margin-left:5px;
 	} 
-=======
-}
-
->>>>>>> FETCH_HEAD
