@@ -1,6 +1,7 @@
 <?php
 require_once 'twitteroauth/twitteroauth.php';
 require_once 'fuzzy_time.php';
+require_once 'twitteroauth/twitteroauth.php';
 
 $consumer_key = 'ANY2AbUdw0itapdkdXEdmVqi4';
 $consumer_secret = 'QZefgPLiUgrDHFtO1ZMGeWfnqYXK6ekLgb2nTq7KZYjZuagLBk';
@@ -13,6 +14,9 @@ $tw_obj = new TwitterOAuth (
   $access_token,
   $access_token_secret);
 
+$leader_screen_name = $_POST["leader_screen_name"];
+
+//募集案内のツイート取得
 $rest_api = 'https://api.twitter.com/1.1/search/tweets.json';
 $method = 'GET';
 $options = array (
@@ -55,6 +59,34 @@ foreach ($tw_obj_request_json['statuses'] as $item) {
   //print_r($item['entities']);
   $i++;
 }
-$tweets  = json_encode($tweets,JSON_UNESCAPED_SLASHES);
-print_r($tweets);
+$tweet_list  = json_encode($tweets,JSON_UNESCAPED_SLASHES);
+
+//活動風景取得
+$rest_api = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
+$method = 'GET';
+$options = array (
+  'screen_name'=> 'sho_qu',
+  'count'=> 100,
+  'include_entities'=> true);
+
+$tw_obj_request = $tw_obj->OAuthRequest (
+  $rest_api,
+  $method,
+  $options);
+
+$tw_obj_request_json = json_decode($tw_obj_request, true);
+$count=0;
+$images=array();
+foreach ($tw_obj_request_json as $item) {
+  $url = $item['entities']['media'][0]['media_url'];
+  $hashtag = $item['entities']['hashtags'][0]['text'];
+  if($url and $hashtag=="活動風景"){
+    $images[$count]=array("name" => $url);
+    $count++;
+  }
+  if($count > 3){
+    break;
+  }
+}
+$image_list  = json_encode($images,JSON_UNESCAPED_SLASHES);
 ?>

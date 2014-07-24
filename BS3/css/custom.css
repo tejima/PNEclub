@@ -1,20 +1,248 @@
-.title {
-	font-size: 4em;
-	padding-top: 10px;
-	padding-bottom: 10px;
+.divbtn-newclub {
+	background-color: #E74C7E;
+	width: 100%;
+	height:100px;
+	margin-bottom: 30px;
+	position:relative;
+}
+
+.divbtn-newclub span{
+	color: white;
+	font-size: 200%;
+	font-weight: bold;
+	
+	position:absolute;
+	left: 5px;
+	bottom: 5px;
+}
+.pneclub-logo{
+	font-size: 400%;
+	font-weight: 500;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.bg-primary {
+	background-color: #2aade1;
+}
+
+footer .footer-title {
+	font-size: 400%;
+	height: 345px;
+	line-height: 345px;
+	font-weight: 500;
+}
+.footer-title p{
+	vertical-align: bottom;
 }
 .topic {
 	margin-top: 30px;
 }
-footer {
-}
-.new-club p {
-	font-size: 22px;
-	padding-top: 37px;
+
+.footer-newclub p {
+	font-size: 120%;
+	height: 172.5px;
+	line-height: 172.5px;
 }
 .found p {
 	padding-top: 44px;
 }
-.footer-title {
-	margin-top: 144px;
+.found {
+	background-color: #E74C7E;
+	height: 100px;
+	min-width: 0px;
+	margin-top: 36.25px;
 }
+
+.thumbnail-club{
+	border-radius: 0;
+	border: 0;
+	padding: 0;
+}
+
+.thumbnail-club .title{
+	padding-top: 6px;
+	padding-left: 6px;
+	margin-top: 0;
+	background-color: #2aade1;
+	color: white;
+	height: 50px;
+	width: 100%;
+	font-size: 170%;
+	font-weight: bold;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.bg-primary .thumbnail-club .title{
+	background-color: #535353;
+}
+
+.thumbnail-club .btn{
+	border-radius: 0;
+}
+.thumbnail-club p{
+	height: 60px;
+	overflow: hidden;
+	margin-bottom: 0;
+}
+
+.thumbnail-club .caption{
+	background-color: #F2F2F2;
+	padding-bottom: 6px;
+}
+
+.progress-nav{
+	height: 25px;
+}
+
+@media (max-width: 991px) {
+	.progress-user {
+		font-size: 110%;
+	}
+	.thumbnail-club-tip{
+	font-size: 80%;
+	}
+	.footer-newclub p {
+	font-size: 120%;
+	height: 146.5px;
+	line-height: 146.5px;
+    }
+    footer .footer-title {
+	font-size: 350%;
+	height: 293px;
+	line-height: 293px;
+	font-weight: 500;
+    }
+    .found {
+	background-color: #E74C7E;
+	height: 100px;
+	min-width: 0px;
+	margin-top: 23.25px;
+	font-size: 12px;
+    }
+}
+@media (max-width: 728px) {
+	.pneclub-logo{
+	font-size: 300%;
+	font-weight: 500;
+	margin-top: 25px;
+	margin-bottom: 25px;
+    }
+	footer .footer-title {
+	font-size: 350%;
+	height: 100px;
+	line-height: 100px;
+	font-weight: 500;
+    }
+    .footer-newclub p {
+	font-size: 120%;
+	height: 60px;
+	line-height: 60px;
+    }
+} 
+@media (min-width: 992px) {
+	.progress-user {
+		font-size: 150%;
+	}
+}
+
+
+
+.main-anchor-div{
+	background-color: #FFFFFF;
+	width: 100%;
+	height: 150px;
+	margin-bottom: 30px;
+	padding: 10px;
+	padding-left: 15px;
+	font-size: 180%;
+	line-height: 170%;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #222;
+	color: #fff;
+}
+
+.h2-deco{
+	font-weight: bold;
+}
+
+.footer-container{
+	padding-top: 20px;
+}
+
+footer{
+	height: 300px;
+
+}
+
+/* single.php用 */
+.square{
+	width: 200px;
+	height: 200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.square-small{
+	width:150px;
+	height:150px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.square-xsmall{
+	width:50px;
+	height:50px;
+	margin-left:auto;
+	margin-right:auto;
+}
+	/* twitter-widget用 */
+	.tw-widget {
+		border-left-style: ridge;
+		border-right-style: ridge;
+		border-bottom-style: ridge;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10px;
+	}
+	.tw-tweet {
+		border-top-style: ridge;
+		margin-bottom:5px;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+	.tw-name {
+		color: #000000;
+		margin-right: 6px;
+	}
+	.tw-screen-name {
+		color: rgba(137,137,137,0.70);
+		margin-right: 6px;
+	}
+	.tw-datetime {
+		color: rgba(137,137,137,0.70);
+	}
+	.button-icon {
+		margin-bottom:2px;
+		margin-right:2px;
+	}
+	.tw-fav {
+		text-align: center;
+	}
+	.tw-reply {
+		text-align: center;
+	}
+	.tw-tweet-text {
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	}
+	.tw-tweet img {
+		margin-right:5px;
+		margin-left:5px;
+		margin-top:5px;
+	}
+	.tw-info {
+		margin-right:5px;
+		margin-left:5px;
+	} 
