@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html ng-app="myapp" lang="en" ng-controller="WidgetListCtrl">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<!-- Bootstrap -->
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/custom.css" rel="stylesheet">
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<script src="js/angular.min.js"></script>
+	<script>
+        var app = angular.module('myapp', []);
+        app.controller('WidgetListCtrl',   ['$scope', function($scope) {
+            $scope.data = widget_data_factory();
+
+            $scope.getNumber = function(num) {
+               return new Array(num);   
+            }
+        }]);
+        function widget_data_factory(){
+            var result = {
+                footer_widget_list: widget_mock(1),
+            };
+            return result;
+        }
+        function widget_mock(num){
+            var result = [];
+            var rand_str = "じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶら";
+            for (i = 0; i < num; i++) { 
+                mock = {
+                    'name':rand_str.slice(-1 * Math.floor(Math.random()*8 + 3)) + '部',
+                    'caption':rand_str.slice(-1 * Math.floor(Math.random()*80 + 20)),
+                    'member_total':Math.floor(Math.random()*50+1),
+                    'member_last':Math.floor(Math.random()*5+1),
+                    'member_new':Math.floor(Math.random()*5+1),
+                    'img': "http://p.pne.jp/d/201407231946.png",
+                };
+                result.push(mock);                   
+            }
+            return result;
+        }
+    </script>
+	<script type="text/ng-template" id="widget_template.html">
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <div class="thumbnail thumbnail-club">
+                <div class="title">{{widget.name}}</div>
+                <img ng-src="{{widget.img}}" alt="...">
+                <div class="caption">
+                    <p>{{widget.caption}}</p>
+                    <div class="progress-user">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <span ng-repeat ="i in getNumber(widget.member_new) track by $index" class="text-primary glyphicon glyphicon-user"></span>
+                                <span ng-repeat ="i in getNumber(widget.member_last) track by $index" class="text-muted glyphicon glyphicon-user"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="thumbnail-club-tip">募集枠</div> <strong>{{widget.member_last + widget.member_new}}人</strong>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="thumbnail-club-tip">新入部員</div> <strong>{{widget.member_new}}人</strong>
+                        </div>
+                        <div class="col-xs-4">
+                            <div class="thumbnail-club-tip">部員総数</div>
+                            <strong>{{widget.member_total}}人</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</head>
+
+<body>
+	<div class="bg-primary">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10">
+					<h1 class="pneclub-logo">PNE.club 申し込みフォーム</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
+			<div class="panel panel-info" >
+				<div class="panel-heading">
+					<div class="panel-title">新規クラブ開設届</div>
+					<div style="float:right; font-size: 80%; position: relative; top:-10px">
+						<a href="#">クラブを開設済み？</a>
+					</div>
+				</div>
+
+				<div style="padding-top:30px" class="panel-body" >
+
+					<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+					<form id="loginform" class="form-horizontal" role="form">
+						<h4>クラブ情報</h4>
+
+						<div style="margin-bottom: 25px" class="input-group input-group-lg">
+							<span class="input-group-addon"> <i class="glyphicon glyphicon-user"></i>
+							</span>
+							<input id="login-username" type="text" class="form-control" name="username" value="" placeholder="クラブ名"></div>
+
+						<div style="margin-bottom: 25px">
+							<textarea class="form-control" rows="3"  placeholder="クラブ紹介文章"></textarea>
+						</div>
+
+						<div style="margin-bottom: 25px" class="input-group input-group-lg">
+							<span class="input-group-addon">http://</span>
+							<input type="text" class="form-control" name="subdomain" placeholder="サイト名">
+							<span class="input-group-addon">.pne.club</span>
+						</div>
+
+						<h4>登録者情報</h4>
+
+						<div style="margin-bottom: 25px" class="input-group input-group-lg">
+							<span class="input-group-addon">@</span>
+							<input type="text" class="form-control" name="subdomain" placeholder="代表のTwitterアカウント"></div>
+
+						<div style="margin-bottom: 25px" class="input-group input-group-lg">
+							<span class="input-group-addon"> <i class="glyphicon glyphicon-envelope"></i>
+							</span>
+							<input type="text" class="form-control" name="subdomain" placeholder="メールアドレス">
+						</div>
+						<h4>会費(月額)</h4>
+
+						<div style="margin-bottom: 25px" class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-credit-card"></i>
+							</span>
+							<input type="text" class="form-control" name="subdomain" placeholder="コース１月額">
+							<span class="input-group-addon">円／月</span>
+						</div>
+						<div style="margin-bottom: 25px" class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-credit-card"></i>
+							</span>
+							<input type="text" class="form-control" name="subdomain" placeholder="コース２月額">
+							<span class="input-group-addon">円／月</span>
+						</div>
+						<div style="margin-bottom: 25px" class="input-group">
+							<span class="input-group-addon">
+								<i class="glyphicon glyphicon-credit-card"></i>
+							</span>
+							<input type="text" class="form-control" name="subdomain" placeholder="コース３月額">
+							<span class="input-group-addon">円／月</span>
+						</div>
+
+						<p>90日間使われないとクラブは自動的に消滅します。1名以上会費を支払っている会員がいれば、制限解除だよ。</p>
+
+						<div class="input-group">
+							<div class="checkbox">
+								<label>
+									<input id="login-remember" type="checkbox" name="remember" value="1">利用規約に同意する</label>
+							</div>
+						</div>
+
+						<div style="margin-top:10px" class="form-group">
+							<!-- Button -->
+
+							<div class="col-sm-12 controls">
+
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-12 control">
+								<div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+									Don't have an account!
+									<a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">Sign Up Here</a>
+								</div>
+							</div>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+		<div id="signupbox" style="display:none; margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<div class="panel-title">Sign Up</div>
+					<div style="float:right; font-size: 85%; position: relative; top:-10px">
+						<a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a>
+					</div>
+				</div>
+				<div class="panel-body" >
+					<form id="signupform" class="form-horizontal" role="form">
+
+						<div id="signupalert" style="display:none" class="alert alert-danger">
+							<p>Error:</p>
+							<span></span>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="col-md-3 control-label">Email</label>
+							<div class="col-md-9">
+								<input type="text" class="form-control" name="email" placeholder="Email Address"></div>
+						</div>
+
+						<div class="form-group">
+							<label for="firstname" class="col-md-3 control-label">First Name</label>
+							<div class="col-md-9">
+								<input type="text" class="form-control" name="firstname" placeholder="First Name"></div>
+						</div>
+						<div class="form-group">
+							<label for="lastname" class="col-md-3 control-label">Last Name</label>
+							<div class="col-md-9">
+								<input type="text" class="form-control" name="lastname" placeholder="Last Name"></div>
+						</div>
+						<div class="form-group">
+							<label for="password" class="col-md-3 control-label">Password</label>
+							<div class="col-md-9">
+								<input type="password" class="form-control" name="passwd" placeholder="Password"></div>
+						</div>
+
+						<div class="form-group">
+							<label for="icode" class="col-md-3 control-label">Invitation Code</label>
+							<div class="col-md-9">
+								<input type="text" class="form-control" name="icode" placeholder=""></div>
+						</div>
+
+						<div class="form-group">
+							<!-- Button -->
+							<div class="col-md-offset-3 col-md-9">
+								<button id="btn-signup" type="button" class="btn btn-info">
+									<i class="icon-hand-right"></i>
+									&nbsp Sign Up
+								</button>
+								<span style="margin-left:8px;">or</span>
+							</div>
+						</div>
+
+						<div style="border-top: 1px solid #999; padding-top:20px"  class="form-group">
+
+							<div class="col-md-offset-3 col-md-9">
+								<button id="btn-fbsignup" type="button" class="btn btn-primary">
+									<i class="icon-facebook"></i>
+									Sign Up with Facebook
+								</button>
+							</div>
+
+						</div>
+
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<footer>
+		<div class="bg-primary">
+			<div class="container footer-container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<div class="footer-title">
+									<p class="text-center">PNE.club</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 hidden-xs-12">
+								<div class="footer-newclub">
+									<p class="text-center">新しいクラブ、増加中! >></p>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12 col-sm-12 hidden-xs">
+								<div class="found">
+									<p style="margin-left: 15px; color: white; font-size: 200%; font-weight: bold;">クラブをつくる</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div ng-repeat="widget in data.footer_widget_list">
+						<div ng-include="'widget_template.html'"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
