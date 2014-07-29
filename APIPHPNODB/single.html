@@ -22,32 +22,15 @@
     <script>
 
         var app = angular.module('myapp', ['ngSanitize']);
-
-        var page_data = {
-
-            club_info:{
-
-                "club_name":"otome",
-                "club_name_long":"乙女の工作部", 
-                "keyword":"工作", 
-                "description":"「可愛い、作れたら・・・」を一緒に形にしていきませんか？乙女の工作部はやる気がある女性ならどなたでもご参加頂けます。みんなで一緒に楽しく作って遊ぶのが目的です。手芸の枠を超えた乙女のＤＩＹ♪",
-                "regular_activity":"月3〜4回、カフェや部室での工作活動",
-                "use_budget":"共有資材・共有物（ハサミや工具）の購入 イベント参加費 共有アトリエの維持費 など",
-                "leader_screenname":"otomenokousakub", 
-                "place":"新宿区", 
-                "mail_address":"otomenokousakubu@gmail.com"
-            }, 
-
-        };
-
-        var params = GetQueryString();
+        var url = location.hostname;
+        var domain = url.slice( 0, -15 );
 
         app.controller('Ctrl',  ['$scope', function($scope) {
             $.ajax({
               type: 'GET',
               url: 'api.php',
                 data: {
-                    'domain': params["domain"],
+                    'domain': domain,
                 },
               success: function(data){
                 $scope.club_info =  data.club_info;
@@ -62,36 +45,10 @@
             });
 
             $scope.data = widget_data_factory();
-            $scope.page_data = page_data; 
-
             $scope.getNumber = function(num) {
                return new Array(num);   
             }
         }]);
-
-        function GetQueryString() {
-            if (1 < document.location.search.length) {
-                // 最初の1文字 (?記号) を除いた文字列を取得する
-                var query = document.location.search.substring(1);
- 
-                // クエリの区切り記号 (&) で文字列を配列に分割する
-                var parameters = query.split('&');
- 
-                var result = new Object();
-                for (var i = 0; i < parameters.length; i++) {
-                    // パラメータ名とパラメータ値に分割する
-                    var element = parameters[i].split('=');
- 
-                    var paramName = decodeURIComponent(element[0]);
-                    var paramValue = decodeURIComponent(element[1]);
- 
-                    // パラメータ名をキーとして連想配列に追加する
-                    result[paramName] = decodeURIComponent(paramValue);
-                }
-                return result;
-            }
-            return null;
-        }
 
         function widget_data_factory(){
             var result = {
@@ -182,8 +139,8 @@
                         {{club_info.keyword}}を精一杯楽しんでいる活動です。
                         {{club_info.keyword}}が大好きなメンバーたちが集まって、
                         {{club_info.keyword}}をひたすら楽しんでいます。
-                        もしあなたが{{club_info.keyword}}好きならば、
-                        私たちと一緒に{{club_info.keyword}}しませんか？
+                        もしあなたが{{keyword}}好きならば、
+                        私たちと一緒に{{keyword}}しませんか？
                 </p>
             </div>
         </div>
@@ -296,9 +253,9 @@
                     <p align="center">参加に興味のある方はツイートにファボ☆で詳細情報をお送りします！</p>
                     <p align="center">
                         質問などあれば
-                        <a ng-href="http://twitter.com/?status=@{{club_info.leader_screenname}}&nbsp;">Twitter</a>
+                        <a ng-href="http://twitter.com/?status=@{{leader_screenname}}&nbsp;">Twitter</a>
                         または
-                        <a ng-href="mailto:{{club_info.mail_address}}?subject=【{{club_info.club_name_long}}】詳細希望">メール</a>
+                        <a ng-href="mailto:{{mail_address}}?subject=【{{club_name_long}}】詳細希望">メール</a>
                         からご連絡おねがいします。
                     </p>
                     <br>

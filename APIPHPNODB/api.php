@@ -25,9 +25,20 @@ $club["soccer"] = array(
                 "place"=>"新宿区", 
                 "mail_address"=>"otomenokousakubu@gmail.com"
               );
+$club["kuzu"] = array( 
+                "club_name"=>"kuzu",
+                "club_name_long"=>"クズ部", 
+                "keyword"=>"飲み会", 
+                "description"=>"月に一回、ふじみ野ログハウスに集まって仲間と活動します。料理、ボードゲーム、カラオケ、農作業、工作などが中心。夏は、花火、スイカ割り、流しそうめん。秋は収穫祭。冬はボードゲームを中心に遊んでいます。",
+                "regular_activity"=>"月1回、ふじみ野ログハウスでの合宿",
+                "use_budget"=>"共有設備の購入、燃料、修繕費などのつみたて",
+                "leader_screenname"=>"tejima", 
+                "place"=>"新宿区,埼玉県富士見市", 
+                "mail_address"=>"tejima@gmail.com"
+              );
 
 $domain = $_GET["domain"];
-$url = $domain;
+$url = $domain."pne.club";
 $club_info = $club[$domain];
 
 $consumer_key = $_SERVER['CONSUMER_KEY'];
