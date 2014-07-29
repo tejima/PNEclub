@@ -17,9 +17,10 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="angular/angular.min.js"></script>
+    <script src="angular/angular-sanitize.js"></script>
     <script>
 
-        var app = angular.module('myapp', []);
+        var app = angular.module('myapp', ['ngSanitize']);
 
         var page_data = {
 
@@ -63,17 +64,17 @@
 
             $http({
               method: 'get',
-              url: 'test.php',
+              url: 'api.php',
             }).
         　　success(function(data) {
-              console.log(data);
+                 $scope.tweet_list = data.tweet_list;
+                 $scope.image_list = data.image_list;
             }).
         　　error(function(data, status) {
               alert('通信エラーが発生しました');
             });
 
             $scope.data = widget_data_factory();
-
             $scope.page_data = page_data; 
 
             $scope.getNumber = function(num) {
@@ -224,10 +225,10 @@
                                 <td>現在の部員数</td>
                                 <td>5名</td>
                             </tr>
-                            <tr>
+                    <!--    <tr>
                                 <td>部費</td>
                                 <td>毎月3,000円（カード決済）</td>
-                            </tr>
+                            </tr> -->
                             <tr>
                                 <td>活動場所</td>
                                 <td>{{page_data.club_info.place}}</td>
@@ -284,7 +285,7 @@
                     <p align="center">参加に興味のある方はツイートにファボ☆で詳細情報をお送りします！</p>
                     <p align="center">
                         質問などあれば
-                        <a ng-href="http://twitter.com/share?text=@{{page_data.club_info.leader_screenname}}&nbsp;">Twitter</a>
+                        <a ng-href="http://twitter.com/?status=@{{page_data.club_info.leader_screenname}}&nbsp;">Twitter</a>
                         または
                         <a ng-href="mailto:{{page_data.club_info.mail_address}}?subject=【{{page_data.club_info.club_name_long}}】詳細希望">メール</a>
                         からご連絡おねがいします。
@@ -307,11 +308,15 @@
                                         <a class="tw-user tw-name" ng-href="https://twitter.com/{{tweet.screen_name}}" target="_blank">{{tweet.name}}</a>
                                         <a class="tw-user tw-screen-name" ng-href="https://twitter.com/{{tweet.screen_name}}" target="_blank">@{{tweet.screen_name}}</a>
                                         <a class="tw-datetime">{{tweet.datetime}}</a>
-                                    </div>
+                                    </div>                                  
+                                </div>  
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-sm12 col-xs-12">
                                     <div ng-bind-html="tweet.text" class="tw-tweet-text">
               　                         {{tweet.text}}
                                     </div>
-                                </div>  
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-5 col-xs-offset-1">

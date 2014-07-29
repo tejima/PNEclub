@@ -1,7 +1,6 @@
 <?php
 require_once 'twitteroauth/twitteroauth.php';
 require_once 'fuzzy_time.php';
-require_once 'twitteroauth/twitteroauth.php';
 
 $consumer_key = 'ANY2AbUdw0itapdkdXEdmVqi4';
 $consumer_secret = 'QZefgPLiUgrDHFtO1ZMGeWfnqYXK6ekLgb2nTq7KZYjZuagLBk';
@@ -14,27 +13,24 @@ $tw_obj = new TwitterOAuth (
   $access_token,
   $access_token_secret);
 
-$leader_screen_name = $_POST["leader_screen_name"];
-$club_name_long = $_POST["club_name_long"];
-
 //募集案内のツイート取得
-$rest_api = 'https://api.twitter.com/1.1/search/tweets.json';
-$method = 'GET';
-$options = array (
+$rest_api1 = 'https://api.twitter.com/1.1/search/tweets.json';
+$method1 = 'GET';
+$options1 = array (
   'q'=>'乙女の工作部',
   'result_type'=>'recent',
   'count'=> 5,
   'include_entities'=> true);
 
-$tw_obj_request = $tw_obj->OAuthRequest (
-  $rest_api,
-  $method,
-  $options);
+$tw_obj_request1 = $tw_obj->OAuthRequest (
+  $rest_api1,
+  $method1,
+  $options1);
 
-$tw_obj_request_json = json_decode($tw_obj_request, true);
+$tw_obj_request_json1 = json_decode($tw_obj_request1, true);
 $tweets=array();
 $i=0;
-foreach ($tw_obj_request_json['statuses'] as $item) {
+foreach ($tw_obj_request_json1['statuses'] as $item) {
   $tweet_id = $item['id_str'];
   $created_at = $item['created_at'];
   $datetime = date('Y-m-d H:i:s', strtotime($created_at));
@@ -50,44 +46,48 @@ foreach ($tw_obj_request_json['statuses'] as $item) {
     $text = str_replace("@".$mentions['screen_name'] , '<a href="https://twitter.com/'.$mentions['screen_name'].'">@'.$mentions['screen_name'].'</a>' , $text);
   }
   foreach($item['entities']['media'] as $media){
-    $text = str_replace($media['url'] , '<br/><a href="'.$media['media_url'].'"><img src="'.$media['media_url'].'"></a>' , $text);
+    $text = str_replace($media['url'] , '<br/><div class="text-img"><a href="'.$media['media_url'].'"><img src="'.$media['media_url'].'"></a></div>' , $text);
   }
   $text = str_replace("\n","<br>",$text);
   $name = $item['user']['name'];
   $screen_name = $item['user']['screen_name'];
   $tweet=array("tweet_id"=>$tweet_id,"datetime"=>$datetime,"text"=>$text,"screen_name"=>$screen_name,"name"=>$name);
-  $tweets[$i]=$tweet;
+  $tweet_list[$i]=$tweet;
   //print_r($item['entities']);
   $i++;
 }
-$tweet_list  = json_encode($tweets,JSON_UNESCAPED_SLASHES);
 
 //活動風景取得
-$rest_api = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
-$method = 'GET';
-$options = array (
-  'screen_name'=> $club_name_long,
+$rest_api2 = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
+$method2 = 'GET';
+$options2 = array (
+  'screen_name'=> sho_qu,
   'count'=> 100,
   'include_entities'=> true);
 
-$tw_obj_request = $tw_obj->OAuthRequest (
-  $rest_api,
-  $method,
-  $options);
+$tw_obj_request2 = $tw_obj->OAuthRequest (
+  $rest_api2,
+  $method2,
+  $options2);
 
-$tw_obj_request_json = json_decode($tw_obj_request, true);
+$tw_obj_request_json2 = json_decode($tw_obj_request2, true);
 $count=0;
-$images=array();
-foreach ($tw_obj_request_json as $item) {
+foreach ($tw_obj_request_json2 as $item) {
   $url = $item['entities']['media'][0]['media_url'];
   $hashtag = $item['entities']['hashtags'][0]['text'];
-  if($url and $hashtag=="活動風景"){
-    $images[$count]=array("name" => $url);
+  //if($url and $hashtag=="活動風景"){
+  if($url){
+    $image=array("url"=>$url);
+    $image_list[$count]=$image;
     $count++;
   }
   if($count > 3){
     break;
   }
 }
-echo $_POST['leader_screenname'];
+
+$data = array("tweet_list"=>$tweet_list,"image_list"=>$image_list);
+$data = json_encode($data,JSON_UNESCAPED_SLASHES);
+echo $data;
+
 ?>
