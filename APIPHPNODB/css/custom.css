@@ -175,10 +175,20 @@ footer{
 
 }
 
+.img-square-small {
+	width: 150px;
+	max-height:150px;
+}
+.img-square{
+	width: 200px;
+	max-height:200px;
+}
+
+
 /* single.php用 */
 .square{
 	width: 200px;
-	height: 200px;
+	/*height: 200px;*/
 	margin-left:auto;
 	margin-right:auto;
 	overflow-y: hidden;
@@ -191,14 +201,14 @@ footer{
 }
 .square-small{
 	width:150px;
-	height:150px;
+	/*max-height:150px;*/
 	margin-left:auto;
 	margin-right:auto;
 	overflow-y: hidden;
 }
 .square-xsmall{
 	width:50px;
-	height:50px;
+	/*max-height:50px;*/
 	margin-left:auto;
 	margin-right:auto;
 	overflow-y: hidden;
