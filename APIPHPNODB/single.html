@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myapp" lang="en" ng-controller="Ctrl">
+<html ng-app="myapp" lang="en" ng-controller="Ctrl" my-main-directive>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,10 +20,21 @@
     <script src="angular/angular-sanitize.js"></script>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script>
+        var app = angular.module('myapp', ['ngSanitize'])
+            .directive('myMainDirective', function() {
+                return function(scope, element, attrs) {
+                    !function(d,s,id){
+                        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                        if(!d.getElementById(id)){js=d.createElement(s);
+                        js.id=id;
+                        js.src=p+"://platform.twitter.com/widgets.js";
+                        fjs.parentNode.insertBefore(js,fjs);
+                    }}(document,"script","twitter-wjs");
+                };
+            });
 
-        var app = angular.module('myapp', ['ngSanitize']);
         var url = location.hostname;
-        var domain = url.slice( 0, -15 );
+        var domain = url.split(".").shift();
 
         app.controller('Ctrl',  ['$scope', function($scope) {
             $.ajax({
@@ -109,7 +120,6 @@
             </div>
         </div>
     </script>
-
 </head>
 
 <body>
@@ -117,7 +127,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10">
-                    <h1 class="pneclub-logo">{{club_info.club_name_long}}</h1>
+                    <h1 class="pneclub-logo">{{club_info.club_name_long}}　</h1>
                 </div>
             </div>
         </div>
@@ -156,10 +166,10 @@
 
     <div class="container">    
         <div class="row">
-            <div ng-repeat="image in image_list">
+            <div ng-repeat="image in image_list track by $index">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="thumbnail square">
-                        <img ng-src="{{image.url}}" alt="...">
+                        <img ng-src="{{image}}" class="img-square" alt="...">
                     </div>
                 </div>
             </div>
@@ -230,7 +240,7 @@
             <div ng-repeat="member in member_screenname_list">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="thumbnail square-small">
-                        <a ng-href="https://twitter.com/{{member.screenname}}"><img ng-src="https://twitter.com/api/users/profile_image?screen_name={{member.screenname}}&size=original" alt="..."></a>
+                        <a ng-href="https://twitter.com/{{member.screenname}}"><img class="img-square-small" ng-src="https://twitter.com/api/users/profile_image?screen_name={{member.screenname}}&size=original" alt="..."></a>
                     </div>
                     <a ng-href="https://twitter.com/{{member.screenname}}"><p align="center">@{{member.screenname}}</p></a>
                 </div>
@@ -250,66 +260,23 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
                 <div class="row">
-                    <p align="center">参加に興味のある方はツイートにファボ☆で詳細情報をお送りします！</p>
-                    <p align="center">
-                        質問などあれば
-                        <a ng-href="http://twitter.com/?status=@{{leader_screenname}}&nbsp;">Twitter</a>
-                        または
-                        <a ng-href="mailto:{{mail_address}}?subject=【{{club_name_long}}】詳細希望">メール</a>
-                        からご連絡おねがいします。
-                    </p>
+                    <p align="center">クラブへの参加に興味のある方は募集ツイートにファボ★をお願いします。こちらからご連絡します。</p>
                     <br>
                 </div>
             </div>
-            <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1">
-                <div class="tw-widget">
-                    <div ng-repeat="tweet in tweet_list"><!--ng-repeat-->
-                        <div class="tw-tweet">
-                            <div class="row">
-                                <div class="col-md-2 col-sm-2 col-xs-3">
-                                    <a ng-href="https://twitter.com/{{tweet.screen_name}}" target="_blank">
-                                    <img class="square-xsmall" ng-src="https://twitter.com/api/users/profile_image?screen_name={{tweet.screen_name}}&size=original" alt="{{tweet.name}}">
-                                    </a>
-                                </div>
-                                <div class="col-md-10 col-sm-10 col-xs-9">
-                                    <div class="tw-info">  
-                                        <a class="tw-user tw-name" ng-href="https://twitter.com/{{tweet.screen_name}}" target="_blank">{{tweet.name}}</a>
-                                        <a class="tw-user tw-screen-name" ng-href="https://twitter.com/{{tweet.screen_name}}" target="_blank">@{{tweet.screen_name}}</a>
-                                        <a class="tw-datetime">{{tweet.datetime}}</a>
-                                    </div>                                  
-                                </div>  
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12 col-sm12 col-xs-12">
-                                    <div ng-bind-html="tweet.text" class="tw-tweet-text">
-              　                         {{tweet.text}}
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-5 col-xs-offset-1">
-                                    <div class="tw-reply">
-                                        <a ng-href="http://twitter.com/intent/tweet?in_reply_to={{tweet.tweet_id}}" class="tw-reply" target="_blank">     
-                                            <button type="button" class="btn btn-default"><img class="button-icon" src="img/reply.png">reply</button>       
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-md-4 col-sm-4 col-xs-5">
-                                    <div class="tw-reply">
-                                        <a ng-href="https://twitter.com/intent/favorite?tweet_id={{tweet.tweet_id}}" target="_blank">
-                                            <button type="button" class="btn btn-default"><img class="button-icon" src="img/star.png">fav</button>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="col-sm-8 col-sm-offset-2">
+                <div ng-repeat="tweet in tweet_list" ng-cloak>
+                    <div class="row">
+                    <div class="col-xs-12">
+                    <blockquote class="twitter-tweet" lang="ja" width="800" align="center">
+                        <p><span ng-bind-html="tweet.text | linky" /></p>
+                        <a ng-href="https://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id_str}}">{{tweet.created_at | date:'mm:ss - yyyy年MM月dd日' }}</a></blockquote>
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
     <footer>
         <div class="bg-primary">
             <div class="container footer-container">
