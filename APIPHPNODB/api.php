@@ -25,7 +25,8 @@ function member_list4screenname($owner_screen_name,$tw_obj){
     {
         $screenname = $item['screen_name'];
         $member_screenname = array(
-            "screenname" => $screenname
+            "screenname" => $screenname,
+            "img_src" => img_src4screen_name($screenname),
         );
         $member_screenname_list[$i] = $member_screenname;
         $i++;
@@ -102,6 +103,20 @@ function image_list4url($url,$tw_obj){
     shuffle(array_unique($image_list));
     return array_slice($image_list, 0, 20);
 }
+function img_src4screen_name($screen_name){
+    $handle = fopen("https://twitter.com/". $screen_name, "r");
+    $result = false;
+    if ($handle) {
+    while (($buffer = fgets($handle, 4096)) !== false) {
+    if(preg_match('/ProfileAvatar-image.*?src="(.*?)"/',$buffer,$matches)){
+    $result = $matches[1];
+    break;
+    }
+    }
+    }
+    fclose($handle);
+    return $result;
+}
 
 $club_list["recorder"] = array( 
                  "club_name"=>"recorder",
@@ -138,7 +153,7 @@ $club_list["otome"] = array(
                 "member_total"=>5,
                 "member_last"=>2,
                 "member_new"=>2,
-                "img"=>"http://p.pne.jp/d/201407231946.png",
+                "img"=>"http://shimizu.cqc.jp/img/otome.png",
               );
 
 $club_list["kuzu"] = array( 
@@ -157,7 +172,7 @@ $club_list["kuzu"] = array(
                "member_total"=>5,
                "member_last"=>2,
                "member_new"=>2,
-               "img"=>"http://fujimino.cqc.jp/wp-content/themes/fujimino/images/f56886408.jpg",
+               "img"=>"http://shimizu.cqc.jp/img/kuzu.jpg",
               );
 $club_list["BoulderingInTakadanobaba"] = array( 
                 "club_name"=>"BoulderingInTakadanobaba",
@@ -211,7 +226,7 @@ $club_list["kaosknight"] = array(
                 "member_total"=>1,
                 "member_last"=>4,
                 "member_new"=>0,
-                "img"=>"http://freebies-db.com/wp-content/uploads/2012/09/free-texture-flame-photostream.jpg",
+                "img"=>"http://shimizu.cqc.jp/img/kaosknight.jpg",
                 );
 $club_list["cfes"] = array(
                 "club_name"=>"cfes",
@@ -224,12 +239,12 @@ $club_list["cfes"] = array(
                 "place"=>"東京都千代田区",
                 "mail_address"=>"info@challenged-festival.jp",
                 "bot_mode"=>false,
-                "name"=>"チャレンジド・フェスティバル応援部",
+                "name"=>"チャレンジドフェスティバル応援部",
                 "caption"=>"知的障がいを持つ子ども・青年70名とその母親たち30名が出演するミュージカルです。継続的なイベント開催のため、イベントを応援してくれる応援部員を求めています。",
                 "member_total"=>1,
                 "member_last"=>4,
                 "member_new"=>0,
-                "img"=>"http://u.jimdo.com/www40/o/sa7cc540b5b388dea/emotion/crop/header.png?t=1401254179",
+                "img"=>"http://shimizu.cqc.jp/img/sample.jpg",
                 );
 $club_list["trpg"] = array(
                 "club_name"=>"trpg",
@@ -278,7 +293,6 @@ $result = <<<EOF
         "footer_widget_list":[$otome_json]
 }
 EOF;
-
 $domain = $_GET["domain"];
 if(!isset($domain)){
     header("Content-Type: application/json; charset=utf-8");
@@ -315,7 +329,7 @@ if (!$is_success_tweet_list) {
     apc_store("tweet_list:" . $url, $tweet_list, 600);
 }
 $data = array(
-    "club_footer" => $club_list["otome"],
+    "club_footer" => $club_list[array_rand($club_list)],
     "club_info" => $club_info,
     "image_list" => $image_list,
     "tweet_list" => $tweet_list,

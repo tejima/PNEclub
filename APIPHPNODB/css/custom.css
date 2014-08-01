@@ -65,9 +65,9 @@ padding-left: 6px;
 margin-top: 0;
 background-color: #2aade1;
 color: white;
-height: 50px;
+height: 40px;
 width: 100%;
-font-size: 170%;
+font-size: 120%;
 font-weight: bold;
 overflow: hidden;
 white-space: nowrap;
@@ -196,7 +196,6 @@ max-height:150px;
 width: 200px;
 max-height:200px;
 }
-
 
 /* single.php用 */
 .square{

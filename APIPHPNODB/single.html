@@ -49,6 +49,7 @@
                 $scope.tweet_list = data.tweet_list;
                 $scope.image_list = data.image_list;
                 $scope.member_screenname_list = data.member_screenname_list;
+                console.log(data.member_screenname_list.img_src);
                 $scope.$apply();
               },
               error: function(){
@@ -89,19 +90,7 @@
         }
 */
     </script>
-    <script>
-    $(function( ) {
-    $("#thumb1").on("load",function(){
-        var iw, ih;
-        var cw = 180;    /*トリミング後の横幅*/
-        var ch = 180;    /*トリミング後の縦幅*/
-        iw = ($(this).width() - cw) / 2;
-        ih = ($(this).height() - ch) / 2;
-        $(this).css("top", "-"+ih+"px");
-        $(this).css("left", "-"+iw+"px");
-    });
-});
-    </script>
+
     <script type="text/ng-template" id="widget_template.html">
         <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="thumbnail thumbnail-club">
@@ -152,7 +141,6 @@
             <img ng-src="{{club_info.background}}" style="width: 100%; max-height: 300px;">
         </div>
     </div>
-
 
     <div class="container topic">
         <div class="row">
@@ -207,7 +195,7 @@
             <div ng-repeat="member in member_screenname_list">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="thumbnail square-small">
-                        <a ng-href="https://twitter.com/{{member.screenname}}"><img class="img-square-small" ng-src="https://twitter.com/api/users/profile_image?screen_name={{member.screenname}}&size=bigger" alt="..."></a>
+                        <a ng-href="https://twitter.com/{{member.screenname}}"><img class="img-square-small" ng-src="{{member.img_src}}" alt="..."></a>
                     </div>
                     <a ng-href="https://twitter.com/{{member.screenname}}"><p align="center">@{{member.screenname}}</p></a>
                 </div>
