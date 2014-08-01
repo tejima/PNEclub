@@ -20,13 +20,8 @@
     <script src="angular/angular-sanitize.js"></script>
     <script src="js/jquery-2.1.1.min.js"></script>
     <script>
-<<<<<<< HEAD
-            .directive('myMainDirective', function() {
-
-=======
         var app = angular.module('myapp', ['ngSanitize'])
             .directive('myRepeatDirective', function() {
->>>>>>> FETCH_HEAD
                 return function(scope, element, attrs) {
                     !function(d,s,id){
                         var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
@@ -60,12 +55,22 @@
                      alert('error');
               }
             });
-
+          //$scope.data = widget_data_factory();
             $scope.getNumber = function(num) {
                return new Array(num);   
             }
         }]);
 /*
+        function widget_data_factory(){
+            var result = {
+                top_widget_list: widget_mock(2),
+                hot_widget_list: widget_mock(3),
+                new_widget_list: widget_mock(4),
+                other_widget_list: widget_mock(4),
+                footer_widget_list: widget_mock(1),
+            };
+            return result;
+        }
         function widget_mock(num){
             var result = [];
             var rand_str = "じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶら";
@@ -83,6 +88,19 @@
             return result;
         }
 */
+    </script>
+    <script>
+    $(function( ) {
+    $("#thumb1").on("load",function(){
+        var iw, ih;
+        var cw = 180;    /*トリミング後の横幅*/
+        var ch = 180;    /*トリミング後の縦幅*/
+        iw = ($(this).width() - cw) / 2;
+        ih = ($(this).height() - ch) / 2;
+        $(this).css("top", "-"+ih+"px");
+        $(this).css("left", "-"+iw+"px");
+    });
+});
     </script>
     <script type="text/ng-template" id="widget_template.html">
         <div class="col-md-4 col-sm-4 col-xs-12">
@@ -123,7 +141,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-10">
-                    <h1 class="pneclub-logo">{{club_info.club_name_long}}　</h1>
+                    <h1 class="pneclub-logo">{{club_info.club_name_long}}</h1>
                 </div>
             </div>
         </div>
@@ -148,17 +166,13 @@
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <p>
-<<<<<<< HEAD
-                   {{club_info.description}}
-=======
-                        {{club_info.description}} 
->>>>>>> FETCH_HEAD
+                        {{club_info.description}}
                 </p>
             </div>
         </div>
     </div>
 
-    <div class="container topic">
+     <div class="container topic">
         <div class="row">
             <div class="col-xs-12">
                 <h2 class="h2-deco text-center">活動風景</h2>
@@ -166,13 +180,9 @@
         </div>
     </div>
 
-    <div class="container">    
+    <div class="container">
         <div class="row">
             <div ng-repeat="image in image_list track by $index">
-<<<<<<< HEAD
-
-=======
->>>>>>> FETCH_HEAD
                 <div class="col-md-3 col-sm-4 col-xs-12 thumbnail-md">
                     <div class="thumbnail">
                     <a ng-href="{{image}}">
@@ -192,16 +202,12 @@
         </div>
     </div>
 
-    <div class="container">    
+    <div class="container">
         <div class="row">
             <div ng-repeat="member in member_screenname_list">
                 <div class="col-md-3 col-sm-4 col-xs-12">
                     <div class="thumbnail square-small">
-                        <a ng-href="https://twitter.com/{{member.screenname}}"><img class="img-square-small" ng-src="https://twitter.com/api/users/profile_image?screen_name={{member.screenname}}&size=original" alt="..."></a>
-<<<<<<< HEAD
-
-=======
->>>>>>> FETCH_HEAD
+                        <a ng-href="https://twitter.com/{{member.screenname}}"><img class="img-square-small" ng-src="https://twitter.com/api/users/profile_image?screen_name={{member.screenname}}&size=bigger" alt="..."></a>
                     </div>
                     <a ng-href="https://twitter.com/{{member.screenname}}"><p align="center">@{{member.screenname}}</p></a>
                 </div>
@@ -235,12 +241,12 @@
                             </tr>
                             <tr>
                                 <td>部員数</td>
-                                <td>部員数 {{club_info.member_total}}人 | 募集中 {{club_info.member_last}}人 | 新入部員 {{club_info.member_new}}人  </td>
+                                <td>部員数 {{club_info.member_total}}人 | 募集中 {{club_info.member_last}}人 | 新入部員 {{club_info.member_new}}人 </td>
                             </tr>
                        <!-- <tr>
-                                <td>部費</td>
-                                <td>毎月3,000円（カード決済）</td>
-                            </tr> -->
+<td>部費</td>
+<td>毎月3,000円（カード決済）</td>
+</tr> -->
                             <tr>
                                 <td>活動場所</td>
                                 <td>{{club_info.place}}</td>
@@ -261,32 +267,6 @@
     </div>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div class="container topic">
-        <div class="row">
-            <div class="col-md-8 col-sm-8 col-xs-12">
-                <h2 class="h2-deco">メンバー</h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">    
-        <div class="row">
-            <div ng-repeat="member in member_screenname_list">
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                    <div class="thumbnail square-small">
-                        <a ng-href="https://twitter.com/{{member.screenname}}"><img class="img-square-small" ng-src="https://twitter.com/api/users/profile_image?screen_name={{member.screenname}}&size=original" alt="..."></a>
-                    </div>
-                    <a ng-href="https://twitter.com/{{member.screenname}}"><p align="center">@{{member.screenname}}</p></a>
-                </div>
-            </div>
-        </div>
-    </div>
-=======
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
 
     <div class="container topic">
         <div class="row">
@@ -294,7 +274,7 @@
                 <h2 class="h2-deco text-center">募集案内</h2>
             </div>
         </div>
-    </div> 
+    </div>
  
     <div class="container">
         <div class="row">
@@ -305,23 +285,10 @@
                 </div>
             </div>
             <div class="col-sm-8 col-sm-offset-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div ng-repeat="tweet in tweet_list" ng-cloak>
-                    <div class="row">
-                    <div class="col-xs-12">
-                    <blockquote class="twitter-tweet" lang="ja" width="800" align="center">
-=======
-=======
->>>>>>> FETCH_HEAD
                 <div ng-repeat="tweet in tweet_list" ng-cloak my-repeat-directive>
                     <div class="row">
                     <div class="col-xs-12">
                     <blockquote class="twitter-tweet" lang="ja" width="800" data-cards="hidden" align="center">
-<<<<<<< HEAD
->>>>>>> FETCH_HEAD
-=======
->>>>>>> FETCH_HEAD
                         <p><span ng-bind-html="tweet.text | linky" /></p>
                         <a ng-href="https://twitter.com/{{tweet.user.screen_name}}/status/{{tweet.id_str}}">{{tweet.created_at | date:'mm:ss - yyyy年MM月dd日' }}</a></blockquote>
                     </div>
