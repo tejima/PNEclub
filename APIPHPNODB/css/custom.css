@@ -49,7 +49,7 @@ footer .footer-title {
 .found {
 	background-color: #E74C7E;
 	height: 100px;
-	min-width: 0px;
+	min-width: 0;
 	margin-top: 36.25px;
 }
 
@@ -67,7 +67,7 @@ footer .footer-title {
 	color: white;
 	height: 50px;
 	width: 100%;
-	font-size: 170%;
+	font-size: 120%;
 	font-weight: bold;
 	overflow: hidden;
 	white-space: nowrap;
@@ -116,7 +116,7 @@ footer .footer-title {
     .found {
 	background-color: #E74C7E;
 	height: 100px;
-	min-width: 0px;
+	min-width: 0;
 	margin-top: 23.25px;
 	font-size: 12px;
     }
@@ -164,6 +164,8 @@ footer .footer-title {
 
 .h2-deco{
 	font-weight: bold;
+	border-bottom:solid 1px #eee;
+	padding-bottom: 4px;
 }
 
 .footer-container{
@@ -175,30 +177,62 @@ footer{
 
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> FETCH_HEAD
+.thumbnail{
+	border: 0!important;
+}
+.thumbnail-md{
+	height: 220px;
+}
+.thumbnail-md img{
+	max-height: 200px;
+	max-width: 200px;
+}
+
+<<<<<<< HEAD
+>>>>>>> FETCH_HEAD
+=======
+>>>>>>> FETCH_HEAD
+.img-square-small {
+	width: 150px;
+	max-height:150px;
+}
+<<<<<<< HEAD
+<<<<<<< HEAD
+.img-square{
+=======
+.thumbnail-img{
+>>>>>>> FETCH_HEAD
+=======
+.thumbnail-img{
+>>>>>>> FETCH_HEAD
+	width: 200px;
+	max-height:200px;
+}
+
+
 /* single.php用 */
 .square{
 	width: 200px;
-	height: 200px;
+	/*height: 200px;*/
 	margin-left:auto;
 	margin-right:auto;
 	overflow-y: hidden;
-	display: box;
-  　display: -webkit-box;
-  　display: -moz-box;
-　　box-align:center;
-  　-webkit-box-align:center;
-  　-moz-box-align:center;
 }
 .square-small{
 	width:150px;
-	height:150px;
+	/*max-height:150px;*/
 	margin-left:auto;
 	margin-right:auto;
 	overflow-y: hidden;
 }
 .square-xsmall{
 	width:50px;
-	height:50px;
+	/*max-height:50px;*/
 	margin-left:auto;
 	margin-right:auto;
 	overflow-y: hidden;

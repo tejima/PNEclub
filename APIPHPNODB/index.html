@@ -17,25 +17,29 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="angular/angular.min.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
     <script>
         var app = angular.module('myapp', []);
         app.controller('WidgetListCtrl',   ['$scope', function($scope) {
-            $scope.data = widget_data_factory();
-
+            $.ajax({
+              type: 'GET',
+              url: 'api.php',
+              dataType: 'json',
+              success: function(data){
+                  $scope.data = data;
+                  console.log(data.other_widget_list);
+                  $scope.$apply();
+              },
+              error: function(){
+                     alert('error');
+              }
+            });
+            
             $scope.getNumber = function(num) {
                return new Array(num);   
             }
         }]);
-        function widget_data_factory(){
-            var result = {
-                top_widget_list: widget_mock(2),
-                hot_widget_list: widget_mock(3),
-                new_widget_list: widget_mock(4),
-                other_widget_list: widget_mock(4),
-                footer_widget_list: widget_mock(1),
-            };
-            return result;
-        }
+/*
         function widget_mock(num){
             var result = [];
             var rand_str = "じゅげむじゅげむごこうのすりきれかいじゃりすいぎょのすいぎょうまつうんらいまつふうらいまつくうねるところにすむところやぶら";
@@ -52,12 +56,13 @@
             }
             return result;
         }
+*/
     </script>
     <script type="text/ng-template" id="widget_template.html">
         <div class="col-md-4 col-sm-4 col-xs-12">
             <div class="thumbnail thumbnail-club">
-                <div class="title">{{widget.name}}</div>
-                <img ng-src="{{widget.img}}" alt="...">
+                <a ng-href="http://{{widget.club_name}}.shimizu.cqc.jp"><div class="title">{{widget.name}}</div></a>
+                <a ng-href="http://{{widget.club_name}}.shimizu.cqc.jp"><img ng-src="{{widget.img}}" alt="..."></a>
                 <div class="caption">
                     <p>{{widget.caption}}</p>
                     <div class="progress-user">
@@ -99,7 +104,7 @@
                 <div ng-repeat="widget in data.top_widget_list" class="hidden-xs">
                     <div ng-include="'widget_template.html'"></div>
                 </div>
-
+<!--
                 <div class="col-md-4 col-sm-4">
                     <div class="row">
                         <div class="col-md-12">
@@ -123,7 +128,7 @@
                                 <br></div>
                         </div>
                     </div>
-
+-->
                 </div>
             </div>
         </div>
@@ -152,7 +157,7 @@
             </div>
         </div>
     </div>
-
+<!--
     <div class="container topic">
         <div class="row">
             <div class="col-md-8 col-sm-8 col-xs-12">
@@ -167,11 +172,11 @@
             </div>
         </div>
     </div>
-
+-->
     <div class="container topic">
         <div class="row">
             <div class="col-md-8 col-sm-8 col-xs-12">
-                <h2 class="h2-deco">初期メンバー大募集</h2>
+                <h2 class="h2-deco">夏期(7〜9月)入部メンバー大募集</h2>
                 <br></div>
         </div>
     </div>
